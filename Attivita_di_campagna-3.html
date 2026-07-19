@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attività di campagna</title>
+<style>
+  :root {
+    --ink: #2b2620;
+    --paper: #faf7f2;
+    --paper-alt: #f0ece2;
+    --line: #d8cfc0;
+    --rock: #6b6255;
+    --accent: #8a5a34;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Georgia", "Palatino Linotype", serif;
+    line-height: 1.55;
+  }
+  header {
+    padding: 3rem 1.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  header .eyebrow {
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--accent);
+  }
+  header h1 {
+    font-size: 2.3rem;
+    margin: 0.3rem 0 0.4rem;
+    font-weight: 600;
+  }
+  header p.sub {
+    color: var(--rock);
+    font-size: 0.95rem;
+    max-width: 600px;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+    display: inline-block;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0 2rem;
+    font-size: 0.92rem;
+  }
+  th {
+    text-align: left;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.55rem 0.7rem;
+    font-weight: 500;
+    font-family: "Courier New", monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: var(--paper-alt); }
+  tr.highlight td { background: #e8dcc8; }
+  td.c-date { white-space: nowrap; font-variant-numeric: oldstyle-nums; }
+  td.c-date a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  td.c-date a:hover { text-decoration: underline; }
+  td a { color: var(--accent); }
+
+  article.attivita {
+    border-top: 1px solid var(--line);
+    padding: 1.6rem 0;
+    scroll-margin-top: 1rem;
+  }
+  article.attivita.highlight {
+    background: var(--paper-alt);
+    box-shadow: inset 3px 0 0 var(--accent);
+    padding-left: 1rem;
+  }
+  article.attivita h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+    color: var(--accent);
+  }
+  p.meta {
+    font-size: 0.85rem;
+    color: var(--rock);
+    margin: 0 0 0.8rem;
+  }
+  span.autore {
+    font-style: italic;
+    margin-left: 0.4rem;
+  }
+  div.testo p {
+    margin: 0 0 0.55rem;
+    font-size: 0.98rem;
+  }
+  p.back {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+  }
+  p.back a {
+    color: var(--rock);
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+  }
+  p.back a:hover { color: var(--accent); }
+
+  #catasto table td:last-child { font-family: "Courier New", monospace; font-size: 0.85rem; }
+
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: var(--rock);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="eyebrow">Diario di campagna &middot; speleologia</div>
+  <h1>Attività di campagna</h1>
+</header>
+
+<main>
+
+<h2>Riepilogo cronologico</h2>
+<table>
+  <thead>
+    <tr><th>Data</th><th>Grotta / Sito</th><th>Complesso</th><th>Partecipanti</th></tr>
+  </thead>
+  <tbody>
+    
+    <tr id="row-2023-01-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-14');return false;">14 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Massimo B., Marco A., Bart, Stefana, Denise, Inni, Ciurru</td>
+    </tr>
+    <tr id="row-2023-01-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-14');return false;">14 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Marco A., Roby P., Inni, Elena, Stefania M., Denise, Bart, Marta</td>
+    </tr>
+    <tr id="row-2023-01-15">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-15');return false;">15 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Bart, Marco A., Marta</td>
+    </tr>
+    <tr id="row-2023-01-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-21');return false;">21 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Bart, Marco A., Marta, Ciurru, Roby P.</td>
+    </tr>
+    <tr id="row-2023-01-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-21');return false;">21 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Marco A., Marta, Ciurru, Alberto M., Roby P., Bart</td>
+    </tr>
+    <tr id="row-2023-01-22">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-01-22');return false;">22 gennaio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Massimo B., Marco A., Bart, Inni, Nicola F., Fabio C.</td>
+    </tr>
+    <tr id="row-2023-02-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-02-18');return false;">18 febbraio 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Bart, Marco A., Ciurru, Inni</td>
+    </tr>
+    <tr id="row-2023-03-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-03-04');return false;">4 marzo 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Bart, Marco A., Ciurru, Inni, Stefania M.</td>
+    </tr>
+    <tr id="row-2023-03-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-03-11');return false;">11 marzo 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Bart, Marco A., Ciurru</td>
+    </tr>
+    <tr id="row-2023-03-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-03-18');return false;">18 marzo 2023</a></td>
+      <td>Monte Croce</td>
+      <td></td>
+      <td>Ciurru, Denise, Elena, Inni, Bart, Thayla</td>
+    </tr>
+    <tr id="row-2023-03-25">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-03-25');return false;">25 marzo 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Marco A., Ciurru, Bart</td>
+    </tr>
+    <tr id="row-2023-04-01">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-04-01');return false;">1 aprile 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Stefania M., Inni, Andrea Fantino, Denise, Bart</td>
+    </tr>
+    <tr id="row-2023-04-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-04-03');return false;">3 aprile 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Inni, Bart</td>
+    </tr>
+    <tr id="row-2023-04-08">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-04-08');return false;">8 aprile 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Inni, Matteo R., Elena, Alberto M., Corrado, Stefano, Bart</td>
+    </tr>
+    <tr id="row-2023-04-22">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-04-22');return false;">22 aprile 2023</a></td>
+      <td>Monte Croce</td>
+      <td></td>
+      <td>Inni, Stefania M., Roby P., Matteo R., Marco A., Elena, Thayla, Bart</td>
+    </tr>
+    <tr id="row-2023-04-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-04-24');return false;">24 aprile 2023</a></td>
+      <td>Zona Passo del Duca – Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Roby P., Marco A.</td>
+    </tr>
+    <tr id="row-2023-06-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-06-24');return false;">24 giugno 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Roby P., Matteo R., Alberto M., Ciurru, Marco A.</td>
+    </tr>
+    <tr id="row-2023-07-01">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-07-01');return false;">1 luglio 2023</a></td>
+      <td>Capanna Morgantini / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Inni, Marco A., Bart</td>
+    </tr>
+    <tr id="row-2023-07-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-07-11');return false;">11 luglio 2023</a></td>
+      <td>Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Inni, Patella, Bart</td>
+    </tr>
+    <tr id="row-2023-07-15">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-07-15');return false;">15 luglio 2023</a></td>
+      <td>Gias dell&#x27;Ortica / Zona Filiberto</td>
+      <td>Complesso delle Carsene</td>
+      <td>Roby P., Nunzio T., Marco A., Inni, Ciurru, Adelia, Alessandra, Bart</td>
+    </tr>
+    <tr id="row-2023-07-16">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-07-16');return false;">16 luglio 2023</a></td>
+      <td>Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Inni, Bart</td>
+    </tr>
+    <tr id="row-2023-07-29">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-07-29');return false;">29 luglio 2023</a></td>
+      <td>Grotta 2-43 delle Carsene</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Roby P., Bart, Nunzio T.</td>
+    </tr>
+    <tr id="row-2023-08-01">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-01');return false;">1 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Zona 2</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Bart, Roby P., Inni</td>
+    </tr>
+    <tr id="row-2023-08-02">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-02');return false;">2 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Grotta G-23</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Stefania M., Roby P., Inni</td>
+    </tr>
+    <tr id="row-2023-08-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-03');return false;">3 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Zona 2</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Stefania M., Inni</td>
+    </tr>
+    <tr id="row-2023-08-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-05');return false;">5 agosto 2023</a></td>
+      <td>Gias dell&#x27;Ortica (allestimento campo) / Zona Testa Murtel</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Roby P., Marta, Stuka, Bart, Ciurru, Marco A., Inni</td>
+    </tr>
+    <tr id="row-2023-08-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-06');return false;">6 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Buco 5-2 e 5-3 delle Carsene / Zona Testa Murtel</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stuka, Stefania M., Ciurru, Bart, Marco A., Roby P., Alberto M., Marta, Inni</td>
+    </tr>
+    <tr id="row-2023-08-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-07');return false;">7 agosto 2023</a></td>
+      <td>Buco 2-44 delle Carsene / Zona Testa Murtel</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Bart, Matteo R., Alberto M., Ciurru, Marco A., Roby P., Inni, Stuka</td>
+    </tr>
+    <tr id="row-2023-08-08">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-08');return false;">8 agosto 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bastiani');return false;">Fortezza Bastiani</a> / Zona Testa Murtel</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Stuka, Matteo R., Stefania M., Bart, Ciurru, Roby P., Inni</td>
+    </tr>
+    <tr id="row-2023-08-09">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-09');return false;">9 agosto 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Buco Filiberto</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Marco A., Roby P., Bart, Stefania M., Matteo R.</td>
+    </tr>
+    <tr id="row-2023-08-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-10');return false;">10 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Buco 6-93 delle Carsene / Zona Testa Murtel</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Luigi P., Roby P., Marco A., Bart, Inni, Ciurru</td>
+    </tr>
+    <tr id="row-2023-08-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-11');return false;">11 agosto 2023</a></td>
+      <td>Grotta 2-43 delle Carsene / Buco 6-93 delle Carsene / Buco 3-14 delle Carsene</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Luigi P., Ciurru, Bart, Stefania M., Roby P., Inni</td>
+    </tr>
+    <tr id="row-2023-08-12">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-12');return false;">12 agosto 2023</a></td>
+      <td>Gias dell&#x27;Ortica (smontaggio campo)</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Roby P., Inni, Luigi P., Stefania M., Marco A.</td>
+    </tr>
+    <tr id="row-2023-08-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-14');return false;">14 agosto 2023</a></td>
+      <td>Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Elena, Inni, Thayla, Bart</td>
+    </tr>
+    <tr id="row-2023-08-19">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-19');return false;">19 agosto 2023</a></td>
+      <td>Buco 6-93 delle Carsene</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Marco A., Bart</td>
+    </tr>
+    <tr id="row-2023-08-26">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-26');return false;">26 agosto 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Luigi P., Marco A., Bart, Elena, Inni</td>
+    </tr>
+    <tr id="row-2023-08-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-08-27');return false;">27 agosto 2023</a></td>
+      <td>Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Elena, Inni, Bart</td>
+    </tr>
+    <tr id="row-2023-09-02">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-09-02');return false;">2 settembre 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Luigi P., Stefania M., Marco A., Roby P., Bart</td>
+    </tr>
+    <tr id="row-2023-09-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-09-03');return false;">3 settembre 2023</a></td>
+      <td>Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Elena, Inni, Stefania M., Thayla, Bart</td>
+    </tr>
+    <tr id="row-2023-09-09">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-09-09');return false;">9 settembre 2023</a></td>
+      <td>Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Inni, Bart, Sasso, Ermanno, Mario, Baudio</td>
+    </tr>
+    <tr id="row-2023-09-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-09-10');return false;">10 settembre 2023</a></td>
+      <td>Buco 5-93 delle Carsene / Capanna Morgantini</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Marco A., Bart, Inni</td>
+    </tr>
+    <tr id="row-2023-11-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-11-04');return false;">4 novembre 2023</a></td>
+      <td>Monte Bartivolera e Cima Cars</td>
+      <td></td>
+      <td>Alberto M., Marco A., Roby P.</td>
+    </tr>
+    <tr id="row-2023-11-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-11-11');return false;">11 novembre 2023</a></td>
+      <td>Zona Roaschia</td>
+      <td></td>
+      <td>Ciurru, Inni, Bart</td>
+    </tr>
+    <tr id="row-2023-11-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-11-18');return false;">18 novembre 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Stefania M., Patrizia, Elena, Marco A., Alberto M., Stuka, Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2023-11-25">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-11-25');return false;">25 novembre 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Alberto M., Marco A., Ciurru, Roby P.</td>
+    </tr>
+    <tr id="row-2023-12-02">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2023-12-02');return false;">2 dicembre 2023</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Alberto M., Stefania M., Patrizia, Marco A., Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2024-01-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-01-06');return false;">6 gennaio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Matteo R., Marco A.</td>
+    </tr>
+    <tr id="row-2024-01-13">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-01-13');return false;">13 gennaio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Stefania M., Patrizia, Luigi P., Alberto M., Enrico R., Andrea B., Roby P., Marco A.</td>
+    </tr>
+    <tr id="row-2024-01-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-01-27');return false;">27 gennaio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Denise, Nunzio T., Roby P., Marco A.</td>
+    </tr>
+    <tr id="row-2024-02-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-02-03');return false;">3 febbraio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Enrico R., Paolo R., Roby P., Matteo R., Bart, Marco A.</td>
+    </tr>
+    <tr id="row-2024-02-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-02-10');return false;">10 febbraio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Marco A., Enrico R., Alberto M., Bart</td>
+    </tr>
+    <tr id="row-2024-02-17">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-02-17');return false;">17 febbraio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Enrico R., Matteo R., Roby P., Stefania M., Ciurru, Luigi P., Nunzio T., Bart</td>
+    </tr>
+    <tr id="row-2024-02-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-02-24');return false;">24 febbraio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Andrea B., Paolo R., Marco A.</td>
+    </tr>
+    <tr id="row-2024-03-16">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-03-16');return false;">16 marzo 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Enrico R., Roby P., Marco A.</td>
+    </tr>
+    <tr id="row-2024-04-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-06');return false;">6 aprile 2024</a></td>
+      <td>Zona Roaschia</td>
+      <td></td>
+      <td>Ciurru, Marco A., Marta, Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2024-04-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-07');return false;">7 aprile 2024</a></td>
+      <td>Conca dei Catini / Grotta delle Turbiglie</td>
+      <td></td>
+      <td>Alberto M., Marco A., Inni, Bart</td>
+    </tr>
+    <tr id="row-2024-04-12">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-12');return false;">12 aprile 2024</a></td>
+      <td>Zona Rai di Porcera / Vallone di Trinità di Entracque</td>
+      <td></td>
+      <td>Stuka, Bart</td>
+    </tr>
+    <tr id="row-2024-04-13">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-13');return false;">13 aprile 2024</a></td>
+      <td>Zona Roaschia</td>
+      <td></td>
+      <td>Ciurru, Marco A., Bart</td>
+    </tr>
+    <tr id="row-2024-04-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-14');return false;">14 aprile 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Inni, Bart</td>
+    </tr>
+    <tr id="row-2024-04-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-18');return false;">18 aprile 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Alberto M., Enrico R., Matteo R.</td>
+    </tr>
+    <tr id="row-2024-04-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-18');return false;">18 aprile 2024</a></td>
+      <td>Zona Carbonai</td>
+      <td></td>
+      <td>Luigi P., Ciurru, Inni, Marco A., Stuka</td>
+    </tr>
+    <tr id="row-2024-04-19">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-19');return false;">19 aprile 2024</a></td>
+      <td>Zona Carbonai</td>
+      <td></td>
+      <td>Luigi P., Elena, Bart, Stuka</td>
+    </tr>
+    <tr id="row-2024-04-20">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-20');return false;">20 aprile 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Stefania M., Alberto M., Marco A., Stuka, Ciurru, Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2024-04-26">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-26');return false;">26 aprile 2024</a></td>
+      <td>Matavun (Slovenia) — Skocjanske Jame</td>
+      <td></td>
+      <td>Marco A., Alberto M., Elena, Marta, Stuka</td>
+    </tr>
+    <tr id="row-2024-04-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-04-27');return false;">27 aprile 2024</a></td>
+      <td>Villanova delle Grotte (UD) — Grotta Doviza</td>
+      <td></td>
+      <td>Marco A., Alberto M., Elena, Marta, Stuka</td>
+    </tr>
+    <tr id="row-2024-05-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-05-04');return false;">4 maggio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Ciurru, Roby P., Alberto M., Bart</td>
+    </tr>
+    <tr id="row-2024-05-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-05-05');return false;">5 maggio 2024</a></td>
+      <td>Zona Entracque — Trinità d&#x27;Entracque</td>
+      <td></td>
+      <td>Stuka, Inni, Bart</td>
+    </tr>
+    <tr id="row-2024-05-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-05-11');return false;">11 maggio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Stefania M., Alberto M., Enrico R., Bart</td>
+    </tr>
+    <tr id="row-2024-05-25">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-05-25');return false;">25 maggio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Alberto M., Bart, Ciurru, Enrico R., Marco A., Nunzio T.</td>
+    </tr>
+    <tr id="row-2024-05-26">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-05-26');return false;">26 maggio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Gioele B., Enrico R., Luca, Sara</td>
+    </tr>
+    <tr id="row-2024-06-01">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-06-01');return false;">1 giugno 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Alberto M., Bart, Marco A., Roby P., Enrico R.</td>
+    </tr>
+    <tr id="row-2024-06-15">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-06-15');return false;">15 giugno 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-spirito');return false;">Grotta Spirito</a></td>
+      <td>Sistema degli Alberghi</td>
+      <td>Alberto M., Roby P., Enrico R., Marco A., Andrea B.</td>
+    </tr>
+    <tr id="row-2024-06-22">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-06-22');return false;">22 giugno 2024</a></td>
+      <td>Buco 5-3 delle Carsene / <a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Roby P., Matteo R., Marco A.</td>
+    </tr>
+    <tr id="row-2024-06-29">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-06-29');return false;">29 giugno 2024</a></td>
+      <td>Marguareis, lato francese</td>
+      <td>Marguareis</td>
+      <td>Alberto M., Bart, Inni, Ciurru</td>
+    </tr>
+    <tr id="row-2024-07-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-07-06');return false;">6 luglio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Zona 5</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Roby P., Alberto M., Nunzio T., Luca, Bart, Inni, Ciurru</td>
+    </tr>
+    <tr id="row-2024-07-13">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-07-13');return false;">13 luglio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Roby P., Alberto M., Luigi P.</td>
+    </tr>
+    <tr id="row-2024-07-20">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-07-20');return false;">20 luglio 2024</a></td>
+      <td>Zona 10 — Meandro J3</td>
+      <td>Marguareis</td>
+      <td>Roby P., Ciurru, Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2024-07-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-07-27');return false;">27 luglio 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Roby P., Alberto M., Nunzio T.</td>
+    </tr>
+    <tr id="row-2024-08-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-03');return false;">3 agosto 2024</a></td>
+      <td>Gias dell&#x27;Ortica (allestimento campo)</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-04');return false;">4 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-05');return false;">5 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Zona Filiberto</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Roby P., Alberto M., Ciurru, Bart</td>
+    </tr>
+    <tr id="row-2024-08-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-06');return false;">6 agosto 2024</a></td>
+      <td>Zona 5 — Pozzo 5-31 e 5-5 delle Carsene</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-07');return false;">7 agosto 2024</a></td>
+      <td>Zona inghiottitoio del pallino rosso / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-08">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-08');return false;">8 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Zona 2 / Colle del Baban</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Roby P., Alberto M., Ciurru, Bart</td>
+    </tr>
+    <tr id="row-2024-08-09">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-09');return false;">9 agosto 2024</a></td>
+      <td>Zona 2 — buco soffiante</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-10');return false;">10 agosto 2024</a></td>
+      <td>Zona 2 — buco soffiante</td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-08-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-14');return false;">14 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Alberto M., Matteo R.</td>
+    </tr>
+    <tr id="row-2024-08-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-21');return false;">21 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Alberto M., Roby P., Marco A., Paolo R.</td>
+    </tr>
+    <tr id="row-2024-08-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-24');return false;">24 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Bart, Marco A., Alberto M., Matteo R.</td>
+    </tr>
+    <tr id="row-2024-08-31">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-08-31');return false;">31 agosto 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Matteo R., Marco A., Luigi P., Bart</td>
+    </tr>
+    <tr id="row-2024-09-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-09-07');return false;">7 settembre 2024</a></td>
+      <td>Zona Colle del Baban</td>
+      <td>Marguareis</td>
+      <td>Stefania M., Bart</td>
+    </tr>
+    <tr id="row-2024-09-28">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-09-28');return false;">28 settembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Marco A., Stefania M., Stuka, Matteo R., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-10-26">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-10-26');return false;">26 ottobre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Stefania M., Marco A., Roby P., Jacopo, Filippo, Alberto M.</td>
+    </tr>
+    <tr id="row-2024-11-01">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-11-01');return false;">1 novembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-11-09">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-11-09');return false;">9 novembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Inni, Bart, Stefania M., Ciurru, Marco A., Roby P., Enrico R., Alberto M.</td>
+    </tr>
+    <tr id="row-2024-12-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-12-07');return false;">7 dicembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Stefania M., Ciurru, Alberto M., Luigi P., Marco A., Paolo R.</td>
+    </tr>
+    <tr id="row-2024-12-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-12-21');return false;">21 dicembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Andrea B., Roby P., Marco A., Bart</td>
+    </tr>
+    <tr id="row-2024-12-28">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2024-12-28');return false;">28 dicembre 2024</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Andrea B., Ciurru, Bart, Stuka, Paolo R., Marco A.</td>
+    </tr>
+    <tr id="row-2025-01-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-01-04');return false;">4 gennaio 2025</a></td>
+      <td>Vallone delle Gorge della Reina (Entracque)</td>
+      <td></td>
+      <td>Marco A., Luigi P.</td>
+    </tr>
+    <tr id="row-2025-01-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-01-05');return false;">5 gennaio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a> (esterno)</td>
+      <td>Sistema del Bergamino</td>
+      <td>Roby P., Marco A., Inni, Bart</td>
+    </tr>
+    <tr id="row-2025-01-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-01-11');return false;">11 gennaio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Stefania M., Marco A., Roby P., Bart</td>
+    </tr>
+    <tr id="row-2025-01-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-01-18');return false;">18 gennaio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Inni, Marco A., Roby P., Bart</td>
+    </tr>
+    <tr id="row-2025-01-25">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-01-25');return false;">25 gennaio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Roby P., Bart, Alberto M.</td>
+    </tr>
+    <tr id="row-2025-02-15">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-02-15');return false;">15 febbraio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Inni, Nunzio T., Bart</td>
+    </tr>
+    <tr id="row-2025-03-20">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-03-20');return false;">20 marzo 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Alberto M., Paolo R., Nicolò F., Meo V., Marco A.</td>
+    </tr>
+    <tr id="row-2025-03-22">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-03-22');return false;">22 marzo 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Marco A., Stefania M., Matteo R., Nicolò F., Bart, Alberto M.</td>
+    </tr>
+    <tr id="row-2025-04-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-04-11');return false;">11 aprile 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Marco A., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-04-12">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-04-12');return false;">12 aprile 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Marco A., Stefania M., Paolo R., Bart, Alberto M.</td>
+    </tr>
+    <tr id="row-2025-04-19">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-04-19');return false;">19 aprile 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Marco A., Paolo R., Bart, Matteo R., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-04-26">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-04-26');return false;">26 aprile 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Bart, Inni, Marco A., Roby P.</td>
+    </tr>
+    <tr id="row-2025-05-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-05-03');return false;">3 maggio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Bart, Inni, Alberto M.</td>
+    </tr>
+    <tr id="row-2025-05-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-05-10');return false;">10 maggio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Stefania M., Ciurru, Bart, Roby P., Gioele B., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-05-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-05-18');return false;">18 maggio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Bart, Matteo R., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-05-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-05-24');return false;">24 maggio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Bart, Ciurru, Marco A., Nunzio T., Paolo R., Stefania M.</td>
+    </tr>
+    <tr id="row-2025-05-31">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-05-31');return false;">31 maggio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Roby P., Ciurru, Bart, Marco A., Stefania M., Alberto M., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-06-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-06-07');return false;">7 giugno 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-zucco');return false;">Zucco</a></td>
+      <td>Area carsica dello Zucco</td>
+      <td>Marco A., Paolo R., Alberto M., Bart</td>
+    </tr>
+    <tr id="row-2025-06-14">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-06-14');return false;">14 giugno 2025</a></td>
+      <td>Versante sud-ovest del Monte Vecchio e Colle Arpiola</td>
+      <td></td>
+      <td>Ciurru, Bart, Inni, Alberto M.</td>
+    </tr>
+    <tr id="row-2025-06-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-06-21');return false;">21 giugno 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Alberto M., Bart, Marco A., Roby P., Nunzio T.</td>
+    </tr>
+    <tr id="row-2025-06-28">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-06-28');return false;">28 giugno 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Ciurru, Matteo R., Roby P., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-07-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-07-05');return false;">5 luglio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Andrea B., Bart, Marco A., Nunzio T., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-07-12">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-07-12');return false;">12 luglio 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Gioele B., Marco A., Paolo R., Roby P., Alberto M., Bart, Inni</td>
+    </tr>
+    <tr id="row-2025-08-02">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-02');return false;">2 agosto 2025</a></td>
+      <td>Gias dell&#x27;Ortica (allestimento campo)</td>
+      <td>Complesso delle Carsene</td>
+      <td>Alberto M., Bart, Ciurru, Inni, Marco A., Stuka, Roby P., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-03">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-03');return false;">3 agosto 2025</a></td>
+      <td>Grotta 6-52 delle Carsene</td>
+      <td>Complesso delle Carsene</td>
+      <td>Stuka, Marco A., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-04');return false;">4 agosto 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a> / Zona del Jurin</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Alberto M., Roby P., Bart, Ciurru, Inni, Stuka, Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-05">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-05');return false;">5 agosto 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-221');return false;">Grotta 2-21 delle Carsene</a> / <a href="javascript:void(0)" onclick="goTo('cat-arrapanui');return false;">Zona Arrapa Nui</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Alberto M., Bart, Marco A., Ciurru, Inni, Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-06');return false;">6 agosto 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / <a href="javascript:void(0)" onclick="goTo('cat-696');return false;">Grotta 6-96 delle Carsene</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Alberto M., Stuka, Roby P., Ciurru, Inni, Marco A., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-07');return false;">7 agosto 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-221');return false;">Grotta 2-21 delle Carsene</a> / <a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Stefania M., Bart, Marco A., Enrico R., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-08-08">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-08-08');return false;">8 agosto 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-arrapanui');return false;">Zona Arrapa Nui</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Ciurru, Inni, Alberto M., Paolo R.</td>
+    </tr>
+    <tr id="row-2025-09-23">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-09-23');return false;">23 settembre 2025</a></td>
+      <td>Vallone del Sabbione / Tetti Gavot / Tetti Piatel / Gias Piainet</td>
+      <td></td>
+      <td>Stuka</td>
+    </tr>
+    <tr id="row-2025-09-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-09-27');return false;">27 settembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-221');return false;">Buco del Ghiaccio</a> (2-21)</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Ciurru, Paolo R., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-11-08">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-11-08');return false;">8 novembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Luigi P., Marco A., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-11-15">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-11-15');return false;">15 novembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Enrico R., Marco A., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-11-23">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-11-23');return false;">23 novembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Enrico R., Gioele B., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-12-13">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-12-13');return false;">13 dicembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Enrico R., Marco A., Paolo R., Alberto M.</td>
+    </tr>
+    <tr id="row-2025-12-20">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2025-12-20');return false;">20 dicembre 2025</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Enrico R., Matteo R., Nunzio T., Paolo R., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-01-10">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-01-10');return false;">10 gennaio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Enrico R., Marco (sub), Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-01-24">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-01-24');return false;">24 gennaio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Enrico R., Marco A., Matteo R., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-01-31">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-01-31');return false;">31 gennaio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Enrico R., Marco A., Nunzio T., Roby P., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-02-07">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-02-07');return false;">7 febbraio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Enrico R., Marco A., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-02-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-02-21');return false;">21 febbraio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Stefania M., Bart</td>
+    </tr>
+    <tr id="row-2026-02-28">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-02-28');return false;">28 febbraio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Andrea B., Bart, Ciurru, Denise, Paolo R., Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-03-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-03-21');return false;">21 marzo 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Enrico R., Marco A., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-03-28">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-03-28');return false;">28 marzo 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Enrico R., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-04-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-04-04');return false;">4 aprile 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-bergamino');return false;">Bergamino</a> / <a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Marco A., Alberto M., Bart, Ciurru, Enrico R., Paolo R.</td>
+    </tr>
+    <tr id="row-2026-04-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-04-11');return false;">11 aprile 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Enrico R., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-04-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-04-18');return false;">18 aprile 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Inni, Roby P., Stefania M.</td>
+    </tr>
+    <tr id="row-2026-05-16">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-05-16');return false;">16 maggio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Inni, Ciurru, Roby P., Alberto M., Enrico R.</td>
+    </tr>
+    <tr id="row-2026-05-23">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-05-23');return false;">23 maggio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Ciurru, Stefania M., Marco A., Enrico R., Tupin</td>
+    </tr>
+    <tr id="row-2026-05-30">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-05-30');return false;">30 maggio 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Bart, Marco A., Alberto M., Enrico R.</td>
+    </tr>
+    <tr id="row-2026-06-06">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-06-06');return false;">6 giugno 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-rospo');return false;">Pozzo del Rospo</a></td>
+      <td>Sistema del Bergamino</td>
+      <td>Ciurru, Enrico R., Inni, Nunzio T., Stefania M., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-06-13">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-06-13');return false;">13 giugno 2026</a></td>
+      <td>Zona Morgantini / <a href="javascript:void(0)" onclick="goTo('cat-fof');return false;">Abisso Fof</a></td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Ciurru, Roby P., Alberto M.</td>
+    </tr>
+    <tr id="row-2026-06-20">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-06-20');return false;">20 giugno 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Alberto M., Enrico R., Paolo R.</td>
+    </tr>
+    <tr id="row-2026-06-21">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-06-21');return false;">21 giugno 2026</a></td>
+      <td><a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Alberto M., Enrico R., Paolo R.</td>
+    </tr>
+    <tr id="row-2026-06-27">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-06-27');return false;">27 giugno 2026</a></td>
+      <td>Conca delle Carsene – <a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Marco A., Nunzio T., Stefania M., Bart, Enrico R.</td>
+    </tr>
+    <tr id="row-2026-07-04">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-07-04');return false;">4 luglio 2026</a></td>
+      <td>Morgantini – <a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Ciurru, Davide T., Inni, Roby P., Sara, Alberto M.</td>
+    </tr>
+    <tr id="row-2026-07-11">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-07-11');return false;">11 luglio 2026</a></td>
+      <td>Conca delle Carsene – <a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Davide T., Inni, Luigi P., Marco A., Paolo R., Roby P., Sara, Alberto M.</td>
+    </tr>
+    <tr id="row-2026-07-18">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-07-18');return false;">18 luglio 2026</a></td>
+      <td>Conca delle Carsene – <a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Ciurru, Davide T., Enrico R., Paolo R., Alberto M.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Dettaglio delle attività</h2>
+
+    <article class="attivita" id="att-2023-01-14">
+      <h3>14 gennaio 2023 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Massimo B., Marco A., Bart, Stefana, Denise, Inni, Ciurru</p>
+      <div class="testo">
+        <p>Accompagnamento persone fino al sifone</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-01-14">
+      <h3>14 gennaio 2023 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Marco A., Roby P., Inni, Elena, Stefania M., Denise, Bart, Marta</p>
+      <div class="testo">
+        <p>Bergamino gita con amici. Ciurru, Marco A., Roby P., Inni, Elena, Stefania M., Denise, Bart e Marta.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-01-15">
+      <h3>15 gennaio 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Marta</p>
+      <div class="testo">
+        <p>Scavo -20</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-15');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-01-21">
+      <h3>21 gennaio 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Marta, Ciurru, Roby P.</p>
+      <div class="testo">
+        <p>Scavo -20 + cunicolo laterale</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-01-21">
+      <h3>21 gennaio 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Marta, Ciurru, Alberto M., Roby P., Bart</p>
+      <div class="testo">
+        <p>Continua la disostruzione nel Meandro laterale...</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-01-22">
+      <h3>22 gennaio 2023 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Massimo B., Marco A., Bart, Inni, Nicola F., Fabio C.</p>
+      <div class="testo">
+        <p>Accompagnamento persone fino al sifone</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-01-22');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-02-18">
+      <h3>18 febbraio 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Ciurru, Inni</p>
+      <div class="testo">
+        <p>Cunicolo laterale scoperta meandro sfondato</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-02-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-03-04">
+      <h3>4 marzo 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Ciurru, Inni, Stefania M.</p>
+      <div class="testo">
+        <p>Lavori per raggiungere il meandro</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-03-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-03-11">
+      <h3>11 marzo 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Ciurru</p>
+      <div class="testo">
+        <p>Lavori per raggiungere il meandro</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-03-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-03-18">
+      <h3>18 marzo 2023 — Monte Croce</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Ciurru, Denise, Elena, Inni, Bart, Thayla</p>
+      <div class="testo">
+        <p>Monte Croce, presso buco in parete e scavo buchi già visti negli anni passati. Ciurru, Denise, Elena, Inni, Bart e Thayla</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-03-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-03-25">
+      <h3>25 marzo 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Ciurru, Bart</p>
+      <div class="testo">
+        <p>continua la disostruzione nel Meandro laterale si avanza di circa 2 metri, fermi su altro restringimento, al di là si intravede un ambiente.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-03-25');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-04-01">
+      <h3>1 aprile 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Stefania M., Inni, Andrea Fantino, Denise, Bart</p>
+      <div class="testo">
+        <p>continua la disostruzione nel Meandro laterale...il trapano non funziona... ma procediamo lo stesso... buon pesce d&#x27;aprile a tutti.</p>
+<p>Ciurru, Stefania M., Inni, Andrea Fantino, Denise e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-04-01');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-04-03">
+      <h3>3 aprile 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Bart</p>
+      <div class="testo">
+        <p>scappatella notturna a regola i conti del 1 Aprile con adeguato trapano funzionante.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-04-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-04-08">
+      <h3>8 aprile 2023 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Matteo R., Elena, Alberto M., Corrado, Stefano, Bart</p>
+      <div class="testo">
+        <p>Continua la disostruzione del Meandro discendente, alla base del pozzo. Il fondo non da belle speranze, mentre la fessura con leggera aria a metà meandro promette di più. Da valutare entrambe con telecamera.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-04-08');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-04-22">
+      <h3>22 aprile 2023 — Monte Croce</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Inni, Stefania M., Roby P., Matteo R., Marco A., Elena, Thayla, Bart</p>
+      <div class="testo">
+        <p>Borgo San dalmazzo monte cross. Scesi buchi in parete, trovato Meandro discendente di circa 15 metri ... ferma su fessura verticale stretta... corrente d&#x27;aria assente. da tornare con telecamera... Inni, Stefania M., Roby P., Matteo R. R., Marco A., Elena, Thayla e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-04-22');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-04-24">
+      <h3>24 aprile 2023 — Zona Passo del Duca – Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Marco A.</p>
+      <div class="testo">
+        <p>battuta nel tratto che va dal passo del Duca al giass dell&#x27;Ortica, trovato 4 buchi interessanti che formano la neve da tornare. Roby P. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-04-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-06-24">
+      <h3>24 giugno 2023 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Matteo R., Alberto M., Ciurru, Marco A.</p>
+      <div class="testo">
+        <p>esplorato un nuovo ramo nello Zucco. Il passaggio era stato individuato l&#x27;anno scorso, si trova nella parte iniziale. Da tornare con corda e chiodi. Roby P., Matteo R., Alberto M., Ciurru e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-06-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-07-01">
+      <h3>1 luglio 2023 — Capanna Morgantini / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Inni, Marco A., Bart</p>
+      <div class="testo">
+        <p>Sabato/Domenica 1/2 Luglio: Conca delle Carsene: Capanna Morgantini... portato materia per le ringhiere, piantoni tasselati in serata. Domenica scesi al Giass dell&#x27;Ortica portato parte dei viveri per il campo.</p>
+<p>Battuta esterna.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-07-01');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-07-11">
+      <h3>11 luglio 2023 — Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Patella, Bart</p>
+      <div class="testo">
+        <p>Capanna Morgantini. Preso le misure per i serramenti nuovi. Finito di saldare la ringhiera. Ciurru, Inni, Patella e Bart. Più due posatori.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-07-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-07-15">
+      <h3>15 luglio 2023 — Gias dell&#x27;Ortica / Zona Filiberto</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Nunzio T., Marco A., Inni, Ciurru, Adelia, Alessandra, Bart</p>
+      <div class="testo">
+        <p>15/16 Luglio. Conca delle Carsene. Portato parte del materiale per il campo al Giass dell&#x27;Ortica. Battuta in zona Filiberto... trovata fessura con forte aria uscente.... già lavorata in passato dal G.S.P.</p>
+<p>Domenica lavori in Capanna Morgantini. Sabato: Roby P., Nunzio T., Marco A., Inni, Ciurru, Adelia, Alessandra e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-07-15');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-07-16">
+      <h3>16 luglio 2023 — Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Inni, Bart</p>
+      <div class="testo">
+        <p>Domenica: Inni e Bart</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-07-16');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-07-29">
+      <h3>29 luglio 2023 — Grotta 2-43 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Roby P., Bart, Nunzio T.</p>
+      <div class="testo">
+        <p>Gias dell&#x27;Ortiche:</p>
+<p>Disostruzione attacco pozzo grotta 2-43. Scesi tre saltini. Fermi su meandro stretto.</p>
+<p>Stefania M. Roby P. Bart Nunzio T.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-07-29');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-01">
+      <h3>1 agosto 2023 — Grotta 2-43 delle Carsene / Zona 2</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Bart, Roby P., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Scesi al Gias delle Ortiche. Disostruzione meandro della grotta 2-43.</p>
+<p>Stefania M. Bart Roby P.</p>
+<p>&nbsp;</p>
+<p>Battuta esterna zona 2.</p>
+<p>Inni</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-01');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-02">
+      <h3>2 agosto 2023 — Grotta 2-43 delle Carsene / Grotta G-23</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Stefania M., Roby P., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Continua la disostruzione della grotta 2-43.</p>
+<p>Bart Stefania M.</p>
+<p>&nbsp;</p>
+<p>Sceso pozzo con aria uscente della grotta G-23. Chiude su neve (almeno 10 metri)</p>
+<p>Roby P. e Inni</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-02');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-03">
+      <h3>3 agosto 2023 — Grotta 2-43 delle Carsene / Zona 2</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Stefania M., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Passati nel meandro disostruito nei gg precedenti nella grotta 2-43. Trovato attacco pozzo con blocchi sospesi. Messa in sicurezza dell&#x27;attacco pozzo.</p>
+<p>Bart e Stefania M.</p>
+<p>&nbsp;</p>
+<p>Battuta esterna zona 2</p>
+<p>Inni</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-05">
+      <h3>5 agosto 2023 — Gias dell&#x27;Ortica (allestimento campo) / Zona Testa Murtel</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Roby P., Marta, Stuka, Bart, Ciurru, Marco A., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>&nbsp;</p>
+<p>Allestimento campo.</p>
+<p>Stefania M. Roby P. Marta Stuka Bart Ciurru Marco A. Inni</p>
+<p>&nbsp;</p>
+<p>Nel pomeriggio sceso pozzo da 10 metri sul tornante del sentiero che va Al duca con aria uscente.</p>
+<p>Marco A. Stuka Marta Inni Stefania M. Roby P.</p>
+<p>&nbsp;</p>
+<p>Nel pomeriggio battuta davanti a Testa Murtel, trovati buchi vecchi che meritano di essere scesi.</p>
+<p>Bart e Ciurru</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-06">
+      <h3>6 agosto 2023 — Grotta 2-43 delle Carsene / Buco 5-2 e 5-3 delle Carsene / Zona Testa Murtel</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stuka, Stefania M., Ciurru, Bart, Marco A., Roby P., Alberto M., Marta, Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>&nbsp;</p>
+<p>Fine disostruzionedel buco 2-43, discesa di tre nuovi pozzi fermi su meandro stretto. Fatto rilievo della grotta.</p>
+<p>Stuka, Stefania M. Ciurru Bart</p>
+<p>&nbsp;</p>
+<p>Visionato il buco 5-2 nella zona 5 trovato da marco e Roby P. durante una battuta primaverile. Da tornare perché vista prosecuzione oltre i blocchi di frana.</p>
+<p>Sceso il buco 5-3. Da tornare perché non è bastata la corda da 40 m.</p>
+<p>Marco A. Roby P. Alberto M. Marta</p>
+<p>&nbsp;</p>
+<p>Battuta in zona Testa Murtel e individuato possibile ingresso grazie ai gracchi</p>
+<p>Inni</p>
+<p>&nbsp;</p>
+<p>Nel pomeriggio inizio disostruzione buco 2-44.</p>
+<p>Inni Bart Ciurru</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-07">
+      <h3>7 agosto 2023 — Buco 2-44 delle Carsene / Zona Testa Murtel</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Bart, Matteo R., Alberto M., Ciurru, Marco A., Roby P., Inni, Stuka</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>&nbsp;</p>
+<p>Continuazione disostruzione del meandro finale, sceso pozzo di circa una dozzina di metri e 3x2 di diametro con un ringiovanimento alla base che lascia poche speranze anche x una decisa disostruzione nonostante la forte aria.</p>
+<p>Stefania M. Bart Matteo R. Alberto M.</p>
+<p>&nbsp;</p>
+<p>Buco scoperto da Inni che si chiamerà 2-44. Chiude su blocchi di frana. Nel pomeriggio visti due buchi in zona Testa Murtel con aria non rilevante.</p>
+<p>Ciurru Marco A. Roby P. Inni Stuka</p>
+<p>&nbsp;</p>
+<p>Nel tardo pomeriggio ritrovato l ingresso indicato da Inni del vecchio pozzo su Testa Murtel.</p>
+<p>Marco A. e Stuka</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-08">
+      <h3>8 agosto 2023 — Fortezza Bastiani / Zona Testa Murtel</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Stuka, Matteo R., Stefania M., Bart, Ciurru, Roby P., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Armato, sceso e ritrovata la grotta trovata il giorno prima. Battezzata Fortezza Bastiani. Marco A. Stuka Matteo R.</p>
+<p>&nbsp;</p>
+<p>Scavati buchi trovati in una battuta primaverile da marco e Roby P. sulla dorsale davanti a Testa Murtel, poco interessanti. Nel pomeriggio sceso pozzo da 10 metri sul tornante del sentiero che va Al duca. Disostruito una strettoia, entrati in una sala discendente, al fondo una fessura impraticabile con forte aria uscente.</p>
+<p>Stefania M. Bart Ciurru Roby P. Inni</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-08');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-09">
+      <h3>9 agosto 2023 — Abisso Fof / Buco Filiberto</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Marco A., Roby P., Bart, Stefania M., Matteo R.</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Armo 2-2 e inizio disostruzione del meandro terminale. Trovato nevaio discendente All&#x27;s base del pozzo. Ciurru Marco A. Roby P.</p>
+<p>&nbsp;</p>
+<p>Armo e scavo buco Filinerto. Bart stefy Matteo R.</p>
+<p>Battuta pareti tra Filiberto e Miniera. Stefania M. e Bart</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-09');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-10">
+      <h3>10 agosto 2023 — Grotta 2-43 delle Carsene / Buco 6-93 delle Carsene / Zona Testa Murtel</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Luigi P., Roby P., Marco A., Bart, Inni, Ciurru</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Disarmo grotta 2-43 stefy luigi Roby P. marco</p>
+<p>&nbsp;</p>
+<p>Disostruzione flessura del pozzo da 10 metri sul tornante del sentiero che va Al duca. Lo stretto non ha una fine. Abbandono dei lavori.</p>
+<p>Battuta esterna nei paraggi. Trovato vecchio buco segnato 6-93 con aria uscente.</p>
+<p>Bart Inni Ciurru</p>
+<p>&nbsp;</p>
+<p>Sceso nel pomeriggio buco 6-93, da lavorare ma promettente.</p>
+<p>Trovate due fessure soffianti nelle vicinanze.</p>
+<p>Stefania M. e Bart</p>
+<p>&nbsp;</p>
+<p>Battuta esterna davanti Testa Murtel guardando zona 8</p>
+<p>Roby P. Marco A. Luigi P.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-11">
+      <h3>11 agosto 2023 — Grotta 2-43 delle Carsene / Buco 6-93 delle Carsene / Buco 3-14 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Luigi P., Ciurru, Bart, Stefania M., Roby P., Inni</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>&nbsp;</p>
+<p>Perfezionato armo 2-2</p>
+<p>Marco A. e Luigi P.</p>
+<p>&nbsp;</p>
+<p>Disostruzione 6-93. Continua lo scavo sul fondo. Forte aria uscente.</p>
+<p>Ciurru Bart Stefania M.</p>
+<p>&nbsp;</p>
+<p>Battuta esterna sotto le pareti del Carbonè versante Pesio. Ritrovato buco 3-14.</p>
+<p>Roby P. e Inni</p>
+<p>&nbsp;</p>
+<p>Nel pomeriggio scesa la prima parte del buco 3-14 fino alla tramoggia.</p>
+<p>Trovata una fessura tettonica con pozzo da scendere mai visto.</p>
+<p>Roby P. Bart Ciurru Marco A. Luigi P. Stefania M.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-12">
+      <h3>12 agosto 2023 — Gias dell&#x27;Ortica (smontaggio campo)</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Roby P., Inni, Luigi P., Stefania M., Marco A.</p>
+      <div class="testo">
+        <p>Gias delle Ortiche:</p>
+<p>Smontato il campo, si scende a valle.</p>
+<p>Ciurru Bart Roby P. Inni Luigi P. Stefania M. Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-12');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-14">
+      <h3>14 agosto 2023 — Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Elena, Inni, Thayla, Bart</p>
+      <div class="testo">
+        <p>14/15 Agosto, Gias dell&#x27;Ortiche. Scavato buco vicino al buco del &quot;T&quot;. Più recupero Mucca caduta in un carren</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-19">
+      <h3>19 agosto 2023 — Buco 6-93 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Marco A., Bart</p>
+      <div class="testo">
+        <p>Gias dell&#x27;Ortiche: buco 6-93 continua la disostruzione. Aria uscente molto forte.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-19');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-26">
+      <h3>26 agosto 2023 — Abisso Fof / Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Luigi P., Marco A., Bart, Elena, Inni</p>
+      <div class="testo">
+        <p>26/27 Agosto</p>
+<p>Giass dell&#x27;Ortica Abisso Fof. Continua la disostruzione nel Meandro terminale.</p>
+<p>Ciurru, Luigi P., Marco A. e Bart.</p>
+<p>Lavori in Capanna Elena e Inni</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-26');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-08-27">
+      <h3>27 agosto 2023 — Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Elena, Inni, Bart</p>
+      <div class="testo">
+        <p>Domenica lavori in Capanna</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-08-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-09-02">
+      <h3>2 settembre 2023 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Luigi P., Stefania M., Marco A., Roby P., Bart</p>
+      <div class="testo">
+        <p>2/3 Settembre</p>
+<p>Giass dell&#x27;Ortica Abisso Fof continua la disostruzione nel Meandro</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-09-02');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-09-03">
+      <h3>3 settembre 2023 — Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Elena, Inni, Stefania M., Thayla, Bart</p>
+      <div class="testo">
+        <p>Domenica lavori in Capanna</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-09-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-09-09">
+      <h3>9 settembre 2023 — Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Inni, Bart, Sasso, Ermanno, Mario, Baudio</p>
+      <div class="testo">
+        <p>9/10 Settembre</p>
+<p>Capanna Morgantini: Lavori vari: impianto elettrico, serratura nuova, tinta agli scuri e posa serramenti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-09-09');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-09-10">
+      <h3>10 settembre 2023 — Buco 5-93 delle Carsene / Capanna Morgantini</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Marco A., Bart, Inni</p>
+      <div class="testo">
+        <p>Domenica buco 5/93</p>
+<p>Continua la disostruzione, aria in uscita sempre più forte</p>
+<p>Stefania M., Marco A. e Bart, collaudo materassi in Capanna Inni.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-09-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-11-04">
+      <h3>4 novembre 2023 — Monte Bartivolera e Cima Cars</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Alberto M., Marco A., Roby P.</p>
+      <div class="testo">
+        <p>Monte Bartivolera e Cima Cars - Alberto M., Marco A. e Roby P. - Battuta esterna</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-11-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-11-11">
+      <h3>11 novembre 2023 — Zona Roaschia</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Ciurru, Inni, Bart</p>
+      <div class="testo">
+        <p>Battuta zona Roaschia.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-11-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-11-18">
+      <h3>18 novembre 2023 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Patrizia, Elena, Marco A., Alberto M., Stuka, Luigi P., Bart</p>
+      <div class="testo">
+        <p>Grotta Bessone (Zucco)</p>
+<p>Riarmo Forra Gotica e giro in Grotta. Stefania M., Patrizia, Elena, Marco A., Alberto M., Stuka, Luigi P. e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-11-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-11-25">
+      <h3>25 novembre 2023 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Marco A., Ciurru, Roby P.</p>
+      <div class="testo">
+        <p>Monte zucco - Alberto M., Marco A., Ciurru, Roby P. - Continuazione esplorazione nuovo ramo</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-11-25');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2023-12-02">
+      <h3>2 dicembre 2023 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Stefania M., Patrizia, Marco A., Luigi P., Bart</p>
+      <div class="testo">
+        <p>Monte zucco - Alberto M., Stefania M., Patrizia, Marco A., Luigi P. e Bart - Continuazione esplorazione nuovo ramo, rilievo e risalita ad una finestra</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2023-12-02');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-01-06">
+      <h3>6 gennaio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Matteo R., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - giro turistico con Meo, Franco e Davide T., camminando è nata la proposta di fare la colorazione (volendo a nome AGSP) con due differenti coloranti uno messo nella conca di Prato e l&#x27;altro in una sorgente in cima al vallone verso artesina...i captori in tutti i sifoni conosciuti- Alberto M., Matteo R. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-01-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-01-13">
+      <h3>13 gennaio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Stefania M., Patrizia, Luigi P., Alberto M., Enrico R., Andrea B., Roby P., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - ripreso lo scavo del sifone di sabbia situato un po&#x27; prima del sifone finale - Bart, Ciurru, Stefania M., Patrizia, Luigi P., Alberto M., Enrico R., Andrea B., Roby P. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-01-13');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-01-27">
+      <h3>27 gennaio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Denise, Nunzio T., Roby P., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - giornata dedicata alla fotografia - Ciurru, Denise, Nunzio T., Roby P. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-01-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-02-03">
+      <h3>3 febbraio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Enrico R., Paolo R., Roby P., Matteo R., Bart, Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - proseguito lo scavo del sifone di sabbia, portato un po&#x27; di materiale necessario per le rotaie, durante lo scavo abbiamo trovato un piccolo arrivo d&#x27;acqua. - Alberto M., Enrico R., Paolo R.,Roby P., Matteo R., Bart e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-02-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-02-10">
+      <h3>10 febbraio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Enrico R., Alberto M., Bart</p>
+      <div class="testo">
+        <p>Bergamino</p>
+<p>Montato le rotaie fino al fronte di scavo. Sistemato alcuni tratti per agevolare il passaggio del carrello.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-02-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-02-17">
+      <h3>17 febbraio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Enrico R., Matteo R., Roby P., Stefania M., Ciurru, Luigi P., Nunzio T., Bart</p>
+      <div class="testo">
+        <p>Bergamino.</p>
+<p>Continua lo scavo verso il fronte seguente i due arrivi d&#x27;acqua.</p>
+<p>Cercato il livello più basso dello scarico dei due arrivi.per il momento, riusciamo a tenere lo scavo asciutto.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-02-17');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-02-24">
+      <h3>24 febbraio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Andrea B., Paolo R., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - proseguito lo scavo del sifone di sabbia, la portata d&#x27;acqua sembra essere costante. Per ora l&#x27;obbiettivo è abbassare il livello dell&#x27;acqua in modo da poter lavorare. - Alberto M., Andrea B., Paolo R. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-02-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-03-16">
+      <h3>16 marzo 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Enrico R., Roby P., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino - giornata dedicata alla fotografia - Enrico R., Roby P. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-03-16');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-06">
+      <h3>6 aprile 2024 — Zona Roaschia</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Ciurru, Marco A., Marta, Luigi P., Bart</p>
+      <div class="testo">
+        <p>Scavo inghiottitoio zona Roaschia. liberato Meandro che respira. per il momento alcune pietre bloccano ancora il passaggio.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-07">
+      <h3>7 aprile 2024 — Conca dei Catini / Grotta delle Turbiglie</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Alberto M., Marco A., Inni, Bart</p>
+      <div class="testo">
+        <p>Conca dei Catini. giro hai due sifoni della Grotta: notato piccolo abbassamento del sifone vicino all&#x27;ingresso</p>
+<p>Esternamente, continua ad aumentare lo sfondamento vicino all&#x27;ingresso delle Turbiglie, si vedono pareti buone, con accenno di pozzo. per il momento, tutto intasato da fango e ghiaia...</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-12">
+      <h3>12 aprile 2024 — Zona Rai di Porcera / Vallone di Trinità di Entracque</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Stuka, Bart</p>
+      <div class="testo">
+        <p>Battuta la zona bassa tra il Rai di Porcera e il Cairas (Vallone di Trinità di Entracque). Visitate numerose sorgenti nella morena bassa e perlustrato la base delle pareti al contatto tettonico che fa da quota sorgenti. Rinvenuta scaturigine di troppo pieno che oggi era rappresentata da un piccolo buco con forte aria uscente. Il neobattezzato Buco dei Carbonai attende gli uomini di buona volontà per mostrargli la via della leggenda. Stuka, Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-12');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-13">
+      <h3>13 aprile 2024 — Zona Roaschia</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Ciurru, Marco A., Bart</p>
+      <div class="testo">
+        <p>Zona inghiottitoio Roaschia, sceso buco in parete e rivisto alcuni buchi in zona.</p>
+<p>Niente di promettente da segnalare.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-13');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-14">
+      <h3>14 aprile 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Inni, Bart</p>
+      <div class="testo">
+        <p>Zucco</p>
+<p>Pulita la strada, dai massi e rami caduti in inverno,</p>
+<p>Liberata la strada che porta al parcheggio della Grotta.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-18">
+      <h3>18 aprile 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Enrico R., Matteo R.</p>
+      <div class="testo">
+        <p>Zucco</p>
+<p>Rifatto il rilievo nel ramo delle Galline, Riarmo completo del pozzo e inizio disostruzione fessura fina.</p>
+<p>Alberto M. Enrico R. e Matteo R.</p>
+<p>Giro seconda sorgente della Bessone (manca conferma con coloranti)e assorbimenti sella dello Zucco. Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-18">
+      <h3>18 aprile 2024 — Zona Carbonai</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Luigi P., Ciurru, Inni, Marco A., Stuka</p>
+      <div class="testo">
+        <p>Buco dei Carbonai. Inizia la disostruzione. Pietre e fango. Avanzamento della fronte di 2 metri. Si entra nella frana. Pietroni penzolano sulle teste.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-19">
+      <h3>19 aprile 2024 — Zona Carbonai</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Luigi P., Elena, Bart, Stuka</p>
+      <div class="testo">
+        <p>Buco dei Carbonai. Continua la disostruzione. Si suonano le campane e i massi scendono: lesto ad arretrare è lo speleo che vuole salve le dita e la faccia. Nessun avanzamento. Dalla pulizia si evince la spaccatura piena di ciottoli arrotondati, sabbia e fango.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-19');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-20">
+      <h3>20 aprile 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Alberto M., Marco A., Stuka, Ciurru, Luigi P., Bart</p>
+      <div class="testo">
+        <p>Zucco</p>
+<p>Risalita zona giunzione, Forra Marco Polo con Forra Gotica, niente di promettente.</p>
+<p>Trovata tripletta di pozzi che dalla fine dei traversi della Marco Polo, arriva nella sottostante Forra dei Drughi. Nella discesa una bella finestra fa ben sperare in una successiva prosecuzione.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-20');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-26">
+      <h3>26 aprile 2024 — Matavun (Slovenia) — Skocjanske Jame</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Marco A., Alberto M., Elena, Marta, Stuka</p>
+      <div class="testo">
+        <p>Matavun (Slovenia), Skocjanske Jame. Visita alla grotta di San Canziano con le guide fino a ¾ abbondanti dell&#x27;Hankejev Kanal. Fotografie analogiche in grotta. Maestoso, unico ed inimitabile ambiente cattedralico, accesso a gradini scavati in roccia e concrezioni con manocorrenti di ferro. Il Fiume romba sotto di noi, la notte sulle nostre teste. Marco A., Alberto M., Elena, Marta, Stuka.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-26');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-04-27">
+      <h3>27 aprile 2024 — Villanova delle Grotte (UD) — Grotta Doviza</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Marco A., Alberto M., Elena, Marta, Stuka</p>
+      <div class="testo">
+        <p>Villanova delle Grotte (UD), presso Taipana, Grotta Doviza. Gita nella labirintica e claustrofobica famosa grotta della Val Torre. Accompagnati da Livio e Andrea B., stravaganti esploratori seriali della cavità. Strettoie e saltini in libera a testa su e in giù. Quasi a confermare un segno del destino, proprio in occasione della festa di Liberazione, campeggia nella Sala delle Scritte, un antica scarburata: &quot;W MATTEOTTI&quot;. Gli speleo cuneesi e goriziani, finalmente in grotta assieme. Fotografie analogiche in grotta. Marco A., Alberto M., Elena, Marta, Stuka (GSAM) + Stefano, Maurizio carabiniere (CRCSh).</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-04-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-05-04">
+      <h3>4 maggio 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Roby P., Alberto M., Bart</p>
+      <div class="testo">
+        <p>Zucco</p>
+<p>Fatte alcune risalite nella forra della settimana scorsa, raggiunto arrivo d&#x27;acqua, ahimè molto stretto.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-05-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-05-05">
+      <h3>5 maggio 2024 — Zona Entracque — Trinità d&#x27;Entracque</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Stuka, Inni, Bart</p>
+      <div class="testo">
+        <p>Zona Entracque, pareti dopo Trinità d&#x27;Entracque, localizzate alcune sorgenti, in parte captate dell&#x27;acquedotto. sottostanti la zona della battuta, del giorno prima.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-05-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-05-11">
+      <h3>11 maggio 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Alberto M., Enrico R., Bart</p>
+      <div class="testo">
+        <p>Zucco</p>
+<p>Forra Delle Galline</p>
+<p>Scesa la serie di pozzi più vicina in pianta alla Marco Polo. Da tornare per raggiungere il forte rumore d&#x27;acqua che si sente a valle e rifare il rilievo.</p>
+<p>Stefania M., Alberto M. Enrico R. e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-05-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-05-25">
+      <h3>25 maggio 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Ciurru, Enrico R., Marco A., Nunzio T.</p>
+      <div class="testo">
+        <p>Disarmo del giro della Marco Polo, forra dell galline</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-05-25');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-05-26">
+      <h3>26 maggio 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Gioele B., Enrico R., Luca, Sara</p>
+      <div class="testo">
+        <p>Giro fino al sifone</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-05-26');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-06-01">
+      <h3>1 giugno 2024 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Roby P., Enrico R.</p>
+      <div class="testo">
+        <p>Allargamento discesa verso il fiume</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-06-01');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-06-15">
+      <h3>15 giugno 2024 — Grotta Spirito</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema degli Alberghi &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Roby P., Enrico R., Marco A., Andrea B.</p>
+      <div class="testo">
+        <p>Giro Turistico, galleria dell&#x27;allunaggio, non siamo andati oltre per troppa acqua. Battuta esterna nei dintorni dell&#x27;ingresso</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-06-15');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-06-22">
+      <h3>22 giugno 2024 — Buco 5-3 delle Carsene / Abisso Fof / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Roby P., Matteo R., Marco A.</p>
+      <div class="testo">
+        <p>Marguareis, siamo andati al 5-3 l&#x27;ingresso era libero ma c&#x27;era troppo stillicidio interno per poter lavorare, nel pomeriggio giro per scoperchiare il 2-2 e liberare il capanno del parco al giass delle ortiche. Ciurru, Roby P.,Matteo R. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-06-22');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-06-29">
+      <h3>29 giugno 2024 — Marguareis, lato francese</h3>
+      <p class="meta"><strong>Complesso:</strong> Marguareis &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Inni, Ciurru</p>
+      <div class="testo">
+        <p>Battuta esterna zona 24-82 24-83 24-84. Trovato nuovo sfondamento, scende circa 12m. Fessura stretta e fondo detritico</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-06-29');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-07-06">
+      <h3>6 luglio 2024 — Abisso Fof / Zona 5</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M., Nunzio T., Luca, Bart, Inni, Ciurru</p>
+      <div class="testo">
+        <p>Marguareis.</p>
+<p>Conca delle Carsene, Abisso Fof Continua la disostruzione del meandro finale.</p>
+<p>Marco A.,Roby P., Alberto M.,Nunzio T., Luca e Bart.</p>
+<p>Battuta e sceso pozzi zona 5.</p>
+<p>Inni e Ciurru.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-07-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-07-13">
+      <h3>13 luglio 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M., Luigi P.</p>
+      <div class="testo">
+        <p>Marguareis.</p>
+<p>Conca delle Carsene, Abisso Fof Continua la disostruzione del meandro finale. Rispetto all&#x27;ultima uscita si è passata la curva dove c&#x27;è un meandro della lunghezza di 3/4 m ancora in fase di disostruzione, si intuisce poi un proseguimento sulla destra</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-07-13');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-07-20">
+      <h3>20 luglio 2024 — Zona 10 — Meandro J3</h3>
+      <p class="meta"><strong>Complesso:</strong> Marguareis &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Ciurru, Luigi P., Bart</p>
+      <div class="testo">
+        <p>Marguareis.</p>
+<p>Battuta in zona 10. Rivisto e disostruito meandro J3.</p>
+<p>Fatti 40 metri, forte aria soffiante. Fermo su frana ostica</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-07-20');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-07-27">
+      <h3>27 luglio 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M., Nunzio T.</p>
+      <div class="testo">
+        <p>Marguareis.</p>
+<p>Conca delle Carsene, Abisso Fof Continua la disostruzione.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-07-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-03">
+      <h3>3 agosto 2024 — Gias dell&#x27;Ortica (allestimento campo)</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Ritrovo a Borgo, salita in capanna con l&#x27;auto e discesa al Gias dell&#x27;Ortica per l&#x27;allestimento del campo.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-04">
+      <h3>4 agosto 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Abisso Fof: Proseguimento dei lavori di adattamento del meandro finale; è stato intercettato un nuovo arrivo.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-05">
+      <h3>5 agosto 2024 — Abisso Fof / Zona Filiberto</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M., Ciurru, Bart</p>
+      <div class="testo">
+        <p>Partecipanti: Marco A., Roby P., Alberto M.</p>
+<p>Abisso Fof: Continuazione dei lavori nel meandro finale, con riscontro di un flusso d&#x27;aria aspirante molto forte e fredda.</p>
+<p>Partecipanti: Ciurru, Bart</p>
+<p>Ricognizione nei pressi di Filiberto alla ricerca di Bab7. La posizione catastale risulta errata e non è stato possibile individuare il punto; è stata eseguita una battuta nell&#x27;area di Filiberto. Sono stati individuati alcuni buchi soffianti nella zona del Abisso Fof.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-06">
+      <h3>6 agosto 2024 — Zona 5 — Pozzo 5-31 e 5-5 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Durante l&#x27;avvicinamento alla zona 5, è stato esplorato l&#x27;inghiottitoio del pallino rosso presso i campi da calcio (N 44.184826° E 7.640444°, ~2.044 m). La cavità è considerata interessante per la presenza di aria soffiante e la struttura del pozzo.</p>
+<p>Pozzo 5-31 (denominato 5F): Permane la presenza del nevaio, con visibilità di un ambiente sottostante. Tuttavia, l&#x27;accesso è ostacolato da un fondo instabile e da massi sospesi, rendendo l&#x27;esplorazione molto pericolosa. È stata rilevata una forte corrente d&#x27;aria.</p>
+<p>Partecipanti: Alberto M., Ciurru, Roby P.</p>
+<p>Pozzo 5-5: La cavità, precedentemente data per -20 m, è stata ora esplorata fino a -45 m, grazie al ritiro del nevaio. Presenta una forma ovale, quasi completamente ostruita dalla neve, ad eccezione del lato a valle, dove inizia un meandro che si arresta dopo 5-6 m in una fessura stretta. Forte aria aspirante.</p>
+<p>Nei pressi del Pozzo 5-5, è stato individuato un altro buco, iniziata la disostruzione, ma abbandonato a causa della pericolosità della zona franosa. Sono stati poi trovati due ulteriori buchi già segnati ma non catastati, potenzialmente interessanti, ma non discesi (N 44.182713° E 7.644377° ~2.135 m e N 44.182835° E 7.644249° ~2.135 m).</p>
+<p>Nel tardo pomeriggio, con un paio di ore di tempo disponibile, si è tornati al Gias dell&#x27;ortica per iniziare la disostruzione di due buchi trovati il giorno precedente.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-07">
+      <h3>7 agosto 2024 — Zona inghiottitoio del pallino rosso / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Salita all&#x27;inghiottitoio del pallino rosso per continuare la liberazione della galleria, con aria soffiante sempre più intensa. L&#x27;attività è stata interrotta a causa di un temporale e rinviata per l&#x27;eccessivo lavoro richiesto, da valutare per i prossimi anni. Sono stati liberati alcuni buchi nella zona del campo, senza risultati significativi.</p>
+<p>Partecipante: Ciurru</p>
+<p>Esplorazione di un vecchio buco già individuato in precedenza, non ancora catastato. La cavità scende fino a -12 m con presenza di aria soffiante. Da rivalutare (N 44.191224° E 7.638947° ~1.890 m).</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-08">
+      <h3>8 agosto 2024 — Abisso Fof / Zona 2 / Colle del Baban</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M., Ciurru, Bart</p>
+      <div class="testo">
+        <p>Partecipanti: Marco A., Roby P., Alberto M.</p>
+<p>Abisso Fof: Estensione del meandro di circa 5 metri, che continua con la stessa morfologia per almeno altri 3 metri, dove si osserva un restringimento. Si percepisce un buon stillicidio in avanti e l&#x27;aria rimane forte e aspirante.</p>
+<p>Partecipanti: Ciurru, Bart</p>
+<p>Ritrovamento di un vecchio pozzo sotto il Colle del Baban. Registrata la posizione, si prevede di tornarvi.</p>
+<p>Ricognizione nella zona 2: Individuato un buco soffiante (N 44.191768° E 7.639329° ~1.877 m). Rimosso circa mezzo metro cubo di materiale, fermati su meandro con aria.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-08');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-09">
+      <h3>9 agosto 2024 — Zona 2 — buco soffiante</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Continuazione della disostruzione del buco individuato il giorno precedente, con estrazione di massi di grandi dimensioni. L&#x27;esplorazione si è fermata su una finestra molto stretta.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-09');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-10">
+      <h3>10 agosto 2024 — Zona 2 — buco soffiante</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Superamento della finestra del buco lavorato il giorno precedente, rivelando un pozzo molto stretto con due gradini intermedi, alto circa 8 metri. Lo sviluppo della grotta è di circa 14 metri, con un dislivello negativo di circa 12 metri. L&#x27;esplorazione si è nuovamente fermata su un meandro molto stretto e basso, non lavorabile.</p>
+<p>Smontato il campo e rientrati.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-14">
+      <h3>14 agosto 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Alberto M., Matteo R.</p>
+      <div class="testo">
+        <p>Partecipanti: Alberto M., Roby P., Paolo R.</p>
+<p>Abisso Fof: Abbiamo continuato i lavori di adattamento dell&#x27;ultimo tratto del meandro, raggiungendo un oblò con un piccolo pozzo subito dopo. La situazione lascia intendere che il meandro sia ormai terminato, aprendo la strada a una prosecuzione più agevole.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-21">
+      <h3>21 agosto 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Roby P., Marco A., Paolo R.</p>
+      <div class="testo">
+        <p>Abisso Fof: Come previsto nell&#x27;uscita precedente, il meandro, che abbiamo deciso di chiamare Fiodena, termina e ci troviamo ora in una zona di pozzi. Oltre l&#x27;oblò, incontriamo un primo pozzo di circa quindici metri, che inizia con una lieve inclinazione e, dopo un&#x27;apertura, scende verticalmente fino a un ripiano. Da qui, prosegue con un secondo pozzo, intervallato da un altro terrazzino, di circa dieci metri. Successivamente, si sposta a sinistra con un piccolo pozzo di 3-4 metri, seguito da un altro di simili dimensioni. La grotta continua con una forte corrente d&#x27;aria attraverso un meandro ostruito da grossi massi.</p>
+<p>La grotta, che ormai supera abbondantemente i 100 metri di profondità, viene dedicata, in accordo con tutti gli speleo che hanno recentemente partecipato all&#x27;esplorazione, a una grande figura scomparsa di recente, assumendo il nome di &quot;Abisso Fof&quot;.</p>
+<p>Al ritorno, è stato fatto il rilievo completo fino all&#x27;uscita.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-24">
+      <h3>24 agosto 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Marco A., Alberto M., Matteo R.</p>
+      <div class="testo">
+        <p>Abisso Fof: Abbiamo proseguito i lavori di adattamento del meandro finale, raggiungendo un pozzetto alto circa 2 metri, abbastanza comodo. Si intravedono due possibili prosecuzioni. Tuttavia, sarà necessario continuare a lavorarci, ma la situazione sembra promettente.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-08-31">
+      <h3>31 agosto 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Matteo R., Marco A., Luigi P., Bart</p>
+      <div class="testo">
+        <p>Abisso Fof .Raggiunto l&#x27;ambiente visto la volta precedente :pozzetto di 3 metri di verticale, purtroppo il Meandro non accenna a finire, altro restringimento al di la il Meandro allarga .si continua ad accomodare il Meandro, il pozzetto appena raggiunto viene adoperato come deposito per il materiale di risulta dei lavori nel Meandro.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-08-31');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-09-07">
+      <h3>7 settembre 2024 — Zona Colle del Baban</h3>
+      <p class="meta"><strong>Complesso:</strong> Marguareis &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Bart</p>
+      <div class="testo">
+        <p>Sceso pozzo zona cole del Baban, il fondo del pozzo e toppo da detrito, tolto alcune pietre in un piccolo laterale del pozzo liberato uno stretto atacco pozzo, la pietra parla di alcuni metri di verticale... da tornare assolutamente...</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-09-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-09-28">
+      <h3>28 settembre 2024 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Marco A., Stefania M., Stuka, Matteo R., Alberto M.</p>
+      <div class="testo">
+        <p>Abisso Fof: Abbiamo ripreso i lavori di disostruzione nel punto raggiunto precedentemente, dopo una serie di pozzi e piccoli pozzetti. Abbiamo trovato un nuovo meandro ostruito da roccia vulcanica e detriti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-09-28');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-10-26">
+      <h3>26 ottobre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Stefania M., Marco A., Roby P., Jacopo, Filippo, Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: visita alla zona di scavo della stagione precedente. Il rigolo d&#x27;acqua, che probabilmente segna la prosecuzione della galleria, è ancora presente e ostacola notevolmente lo scavo. Stefania M., Jacopo e Filippo hanno iniziato a rivedere il ramo delle Sirene, ma hanno dovuto interrompere a causa dell&#x27;eccessiva presenza d&#x27;acqua.</p>
+<p>Al ritorno, un passaggio vicino all&#x27;uscita presentava un buon livello d&#x27;acqua a causa di un forte temporale esterno. Questo potrebbe diventare problematico in caso di piogge prolungate in futuro, creando potenziali difficoltà per la progressione.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-10-26');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-11-01">
+      <h3>1 novembre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: visita a una galleria ostruita, non più esplorata da tempo. Avviato un nuovo scavo in sabbia e strati di tacchini.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-11-01');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-11-09">
+      <h3>9 novembre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Inni, Bart, Stefania M., Ciurru, Marco A., Roby P., Enrico R., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: ritorno alla galleria ostruita, con proseguimento dello scavo in sabbia e strati di tacchini. Eseguito un nuovo rilievo di questo ramo della galleria. Stefania M. ed Enrico R. hanno rivisitato il ramo delle Sirene.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-11-09');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-12-07">
+      <h3>7 dicembre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Stefania M., Ciurru, Alberto M., Luigi P., Marco A., Paolo R.</p>
+      <div class="testo">
+        <p>Bergamino: Lo scavo in corso è proseguito, ma purtroppo dopo una verifica a voce c&#x27;è stato un contatto coni l ramo dei cristalli. Si è ritenuto quindi inutile continuare lo scavo in quella direzione.</p>
+<p>Stefania M., Bart e Luigi P. hanno esplorato nuovamente il ramo delle sirene: il passaggio si è rivelato molto stretto e difficile da lavorare.</p>
+<p>Infine, è stata esaminata una galleria ostruita nella prima tratta. Attraverso colpi sulla parete, si è concluso che questa termina nel conosciuto</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-12-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-12-21">
+      <h3>21 dicembre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Andrea B., Roby P., Marco A., Bart</p>
+      <div class="testo">
+        <p>Bergamino</p>
+<p>Scavo nuova condotta sotto lo scavo delle rotaie, speriamo non sia l&#x27;ennesima inculata.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-12-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2024-12-28">
+      <h3>28 dicembre 2024 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Andrea B., Ciurru, Bart, Stuka, Paolo R., Marco A.</p>
+      <div class="testo">
+        <p>continuato lo scavo nel sifone di sabbia, si intuisce che il cunicolo riporta nel conosciuto. Andrea B., Ciurru, Bart, Stuka, Paolo R. e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2024-12-28');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-01-04">
+      <h3>4 gennaio 2025 — Vallone delle Gorge della Reina (Entracque)</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Marco A., Luigi P.</p>
+      <div class="testo">
+        <p>Risalita al vallone delle gorge della Reina da Entracque cercato la balma che lo scorso anno avevamo quasi raggiunto, trovato niente di rilevante. Scendendo notato una concentrazione di carren sul lato sinistro in senso olografico. Luigi P., Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-01-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-01-05">
+      <h3>5 gennaio 2025 — Bergamino (esterno)</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Marco A., Inni, Bart</p>
+      <div class="testo">
+        <p>Battuta sopra ingresso del Bergamino: niente di rilevante da segnalare.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-01-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-01-11">
+      <h3>11 gennaio 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Marco A., Roby P., Bart</p>
+      <div class="testo">
+        <p>Bergamino:</p>
+<p>Disostruzione condotta freatica vicino al sifone terminale: sembra promettente, da continuare.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-01-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-01-18">
+      <h3>18 gennaio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Marco A., Roby P., Bart</p>
+      <div class="testo">
+        <p>Continua lo scavo nella parte verticale del Pozzo, per il momento il materiale viene messo nel Meandro laterale.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-01-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-01-25">
+      <h3>25 gennaio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Roby P., Bart, Alberto M.</p>
+      <div class="testo">
+        <p>Messa in sicurezza la porzione instabile con impalcatura</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-01-25');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-02-15">
+      <h3>15 febbraio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Nunzio T., Bart</p>
+      <div class="testo">
+        <p>Continua lo scavo. Ciurru, Inni, Nunzio T. e Bart.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-02-15');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-03-20">
+      <h3>20 marzo 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Paolo R., Nicolò F., Meo V., Marco A.</p>
+      <div class="testo">
+        <p>Bergamino, iniziato il lavoro della colorazione. Usato due colorate differenti, uno sulla conca di Prato nevoso e uno nell&#x27;inghiottitoio del vallone. Internamente posizionati 6 captori più lo strumento di monitoraggio continuo alla sorgente. Alberto M., Paolo R., NicoloF, Meo e Marco A.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-03-20');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-03-22">
+      <h3>22 marzo 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Marco A., Stefania M., Matteo R., Nicolò F., Bart, Alberto M.</p>
+      <div class="testo">
+        <p>avanzamento scavo nel pozzo e messa in sicurezza della porzione instabile con impalcatura</p>
+<p>Ciurru, Marco A., Stefania M., Matteo R., Nicolò, Bart e Alberto M.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-03-22');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-04-11">
+      <h3>11 aprile 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: recupero dei captori piazzati il 20 marzo</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-04-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-04-12">
+      <h3>12 aprile 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Marco A., Stefania M., Paolo R., Bart, Alberto M.</p>
+      <div class="testo">
+        <p>avanzamento dello scavo e messa in sicurezza della parte inferiore con impalcatura</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-04-12');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-04-19">
+      <h3>19 aprile 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Marco A., Paolo R., Bart, Matteo R., Alberto M.</p>
+      <div class="testo">
+        <p>avanzamento dello scavo</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-04-19');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-04-26">
+      <h3>26 aprile 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Inni, Marco A., Roby P.</p>
+      <div class="testo">
+        <p>proseguimento dello scavo e installazione di un ulteriore tratto di impalcatura nella porzione inferiore.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-04-26');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-05-03">
+      <h3>3 maggio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Inni, Alberto M.</p>
+      <div class="testo">
+        <p>proseguimento dello scavo e installazione di un nuovo tratto di impalcatura. Durante l&#x27;uscita è stata anche sperimentata una nuova campana di protezione per il secchio, utilizzata nelle operazioni di scavo. In occasione dell&#x27;ultima uscita stagionale, è stata inoltre rimossa la corda e recuperato gran parte del materiale presente sul posto.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-05-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-05-10">
+      <h3>10 maggio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Ciurru, Bart, Roby P., Gioele B., Alberto M.</p>
+      <div class="testo">
+        <p>proseguimento dello scavo con avanzamento verticale di circa due metri. La progressione si è svolta in una zona con evidente restringimento; la morfologia attuale suggerisce l&#x27;inizio di un possibile meandro.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-05-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-05-18">
+      <h3>18 maggio 2025 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Bart, Matteo R., Alberto M.</p>
+      <div class="testo">
+        <p>Ultima uscita della stagione al Rospo, dedicata a interventi finali di manutenzione. Sono stati posizionati nuovi pali per consolidare la struttura e si è proceduto con l&#x27;avanzamento dell&#x27;area di lavoro.</p>
+<p>&nbsp;</p>
+<p>Con questa attività si conclude ufficialmente la stagione 2025 al Pozzo del Rospo.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-05-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-05-24">
+      <h3>24 maggio 2025 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Marco A., Nunzio T., Paolo R., Stefania M.</p>
+      <div class="testo">
+        <p>Zucco: esplorazione nella parte alta dei Giardini Zen.</p>
+<p>Sono stati discesi due pozzi apparentemente inesplorati, ma la presenza di segni di rilievo sulle pareti ha confermato il contrario. La giornata è proseguita ripercorrendo alcuni tratti già noti ma in parte dimenticati.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-05-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-05-31">
+      <h3>31 maggio 2025 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Roby P., Ciurru, Bart, Marco A., Stefania M., Alberto M., Paolo R.</p>
+      <div class="testo">
+        <p>Zucco: attività nella zona del Ramo dell&#x27;Architetto, dove è stata condotta una perlustrazione dell&#x27;area più a monte e avviata una risalita in un punto ritenuto interessante per possibili sviluppi futuri.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-05-31');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-06-07">
+      <h3>7 giugno 2025 — Zucco</h3>
+      <p class="meta"><strong>Complesso:</strong> Area carsica dello Zucco &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Paolo R., Alberto M., Bart</p>
+      <div class="testo">
+        <p>Zucco: attività nella zona del Ramo dell&#x27;Architetto.</p>
+<p>Durante l&#x27;uscita è stata riesaminata la presenza d&#x27;aria nel Ramo dell&#x27;Architetto: non sembra diminuire né aumentare. È poi proseguita la risalita, che ha raggiunto un secondo terrazzino. La prosecuzione è promettente e andrà portata avanti.</p>
+<p>Bart ha invece fatto una battuta esterna, causa scambio di tute: la sua era finita a Paolo R., che l&#x27;aveva dimenticata a casa.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-06-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-06-14">
+      <h3>14 giugno 2025 — Versante sud-ovest del Monte Vecchio e Colle Arpiola</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Ciurru, Bart, Inni, Alberto M.</p>
+      <div class="testo">
+        <p>Zona: versante sud-ovest del Monte Vecchio e Colle Arpiola</p>
+<p>Battuta esterna alla ricerca di nuove cavità, esplorando il versante sud-ovest del Monte Vecchio e i dintorni del Colle Arpiola. Nonostante le buone condizioni e un ampio giro effettuato (traccia GPS disponibile), non sono stati individuati punti di particolare interesse.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-06-14');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-06-21">
+      <h3>21 giugno 2025 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Roby P., Nunzio T.</p>
+      <div class="testo">
+        <p>Abisso Fof: prosecuzione delle esplorazioni</p>
+<p>Durante l&#x27;uscita è stato superato il meandro lasciato in sospeso la scorsa stagione, che ha condotto a un ampio salone. Da qui, con un frazionamento, si è scesi per circa 8 metri fino alla base, dove ha inizio un nuovo meandro impostato su calcare scuro. In questa zona non si osservano più le vulcaniti presenti lungo il tratto tra il meandro Fiodena e il salone. Il nuovo meandro, lungo circa 30 metri, prosegue in forte discesa, con alcuni piccoli salti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-06-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-06-28">
+      <h3>28 giugno 2025 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Matteo R., Roby P., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Abisso Fof: prosecuzione delle esplorazioni</p>
+<p>Durante l&#x27;uscita è stato arrotondato il meandro finale ed è stato sceso il nuovo pozzo. L&#x27;ambiente, stimato attorno ai 60 metri di altezza e 10 per 4 metri di ampiezza, sarà meglio definito con il rilievo. Sul fondo, un piccolo pozzetto laterale prosegue per circa 10 metri prima di chiudersi. Presente forte stillicidio, ma assenza di aria percepibile. È stato proposto per il pozzo il nome D.O.C.G – Di Origine Carsica Garantita.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-06-28');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-07-05">
+      <h3>5 luglio 2025 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Andrea B., Bart, Marco A., Nunzio T., Alberto M.</p>
+      <div class="testo">
+        <p>Abisso Fof: prosecuzione delle esplorazioni</p>
+<p>Durante l&#x27;uscita è stato attrezzato un traverso sopra il pozzo da circa 60 metri, per raggiungere una finestra che si è purtroppo rivelata chiusa. Completato il rilievo delle nuove zone esplorate nei giorni precedenti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-07-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-07-12">
+      <h3>12 luglio 2025 — Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Gioele B., Marco A., Paolo R., Roby P., Alberto M., Bart, Inni</p>
+      <div class="testo">
+        <p>Abisso Fof: proseguimento delle ricerche nella zona finale. Utilizzando un fumogeno, si è cercato di individuare la direzione dell&#x27;aria, che sembra convogliarsi verso una nicchia parallela all&#x27;ultimo meandro. La finestra d&#x27;accesso è stata allargata per poter esplorare l&#x27;ambiente, che si presenta con un arrivo superiore non particolarmente convincente: anche il fumo, infatti, tende a ristagnare e turbinare nel volume, senza seguire una direzione definita.</p>
+<p>Partecipanti: Gioele, Marco A., Paolo R., Roby P. e Alberto M.</p>
+<p>Battuta esterna (zona 5): Bart e Inni.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-07-12');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-02">
+      <h3>2 agosto 2025 — Gias dell&#x27;Ortica (allestimento campo)</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Ciurru, Inni, Marco A., Stuka, Roby P., Paolo R.</p>
+      <div class="testo">
+        <p>CAMPO SPELEOLOGICO ESTIVO 2025 - gias dell&#x27;ortica</p>
+<p>Sabato 2 agosto</p>
+<p>&nbsp;</p>
+<p>Partenza preceduta da pranzo al S. Lucia (Vernante). Saranno le 15 e partiamo. Due macchine cariche.</p>
+<p>Siamo Paolo R., Alberto M., Bart, Ciurru, Inni, Marco A., Stuka e Roby P. Tempo instabile. Prevista pioggia. Alla Morgantini scarichiamo le auto e ci spaventa l&#x27;idea di doverci caricare tutta quella roba sulle spalle fino al gias.</p>
+<p>Sembra incredibile ma riusciamo a portare tutto al cmpo carichi come muli, stanchi. Scarichiamo e montiamo le tende. Non abbiamo ancora finito che inizia a piovere.</p>
+<p>Attendiamo un po&#x27; di tempo, ognuno nella propria tenda.</p>
+<p>Facciamo conoscenza con Andrea, il pastore che quest anno affitta il terreno per il pascolo. Ci accoglie nella sua capanna e ci troviamo subito a condividere una cena. Nottata di grande pioggia. Tuoni e lampi.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-02');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-03">
+      <h3>3 agosto 2025 — Grotta 6-52 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stuka, Marco A., Paolo R.</p>
+      <div class="testo">
+        <p>sveglia con calma. Giornata con poca organizzazione. Ci dirigiamo verso alcuni buchi noti che vanno rivisti.</p>
+<p>6-52: scendiamo Paolo R., Stuka e Marco A. Vedere un passaggio laterale dopo il primo pozzo di una decina di metri.</p>
+<p>Dopo la discesa del primo tiro ci si trova su una serie di pietroni incastrati su cui poggiamo i piedi.</p>
+<p>La discesa continua sotto queste pietre, assumendo un certo carattere inquietante, fino a giungere ad un terrazzo largo.</p>
+<p>Due pareti, una di fronte l&#x27;altra dietro di noi si alzano fino a incontrarsi verso la direzione da cui siamo arrivati. Seguendo le pareti nella direzione dell&#x27;esterno non si va da nessuna parte, chiusura totale. Dall&#x27;altra parte il passaggio è molto stretto ma non impossibile. Non si percepisce aria.</p>
+<p>Paolo R. e Marco A. scendono ancora in mezzo alle due pareti. Una calata di una decina di metri e si arriva in un ambiente spazioso (mal giudicati 3 x 5 m). Da un lato la volta di abbassa a formare una stretta strettoia dalla quale Marco A. sente una leggera aria soffiante. Giudicata lavorabile.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-03');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-04">
+      <h3>4 agosto 2025 — Abisso Fof / Zona del Jurin</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Alberto M., Roby P., Bart, Ciurru, Inni, Stuka, Paolo R.</p>
+      <div class="testo">
+        <p>si punta al 2-2 (Abisso Fof).</p>
+<p>Resta ancora da chiarire la situazione dell&#x27;aria. (Paolo R., Marco A., Alberto M., Roby P.)</p>
+<p>Giunti al terrazzo sopra al pozzo terminale, l&#x27;aria sembra ingilarsi in un camino in salita. Non sembra scendere nel grande pozzo.</p>
+<p>Mistero della fede. Marco A. completa la risalita. In cima al camino una piccola strettoia sembra essere la destinazione dell&#x27;aria, ma non ne siamo convinti. (prove con fumogeni artigianali)</p>
+<p>Provare a scavare quella fessura, arrivando dalla risalita ci pare una cosa veramente ardua. Nel frattempo Roby P. e Alberto M. scendono sul fondo. Lavoranoal meandro in fondo al pozzo. In particolare alla parte alta del meandro, rimuovendo pietre. A fine giornata, l&#x27;aria è assente e l&#x27;avanzamento stimato in 3-5 m.</p>
+<p>&nbsp;</p>
+<p>In contemporanea a noi, gli altri sono in battuta esterna nella zona del Jurin (Bart, Ciurru, Inni, Stuka). Ispezione in due cavità interessanti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-05">
+      <h3>5 agosto 2025 — Grotta 2-21 delle Carsene / Zona Arrapa Nui</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Bart, Marco A., Ciurru, Inni, Paolo R.</p>
+      <div class="testo">
+        <p>grotta 2-21 (Paolo R., Alberto M., Bart, Marco A.) - all&#x27;ingresso si avverte nettamente un flusso d&#x27;aria intermittente. Per alcuni secondi soffia, per alcuni secondo aspira. Il soffio è di aria molto fredda.</p>
+<p>scendiamo nella discenderia (scarica molto) armata un po&#x27; in maniera croccante.</p>
+<p>La galleria inizialmente stretta si allarga fino a terminare in ampio salone su un saltino di 2 m.</p>
+<p>Nel salone c&#x27;è ghiaccio in abbondanza. Sul pavimento, compare una sorta lingua di ghiaccio, come rigagnolo di acqua congelato. Ghiaccio a tratti sulle pareti, presente una cascatella ghiacciata in arrivo da una parete.</p>
+<p>Cerchiamo in ogni punto della grotta la sorgente di tale flusso d&#x27;aria. Solo un punto (a destra dell&#x27;ingresso) ci pare abbia un po&#x27; di aria. Si trova alla base di una frana. Intasato da rocce e terra. Tentiamo una disostruzione. Allarghiamo la base di quello che ipotizziamo essere un meandro. L&#x27;aria sembra non scomparire del tutto anche se è molto debole. Non siamo sicuri sia il punto giusto.</p>
+<p>Dopo avanzamento di un paio di metri, colti dal tremendo freddo di quell&#x27;ambiente, usciamo.</p>
+<p>&nbsp;</p>
+<p>In contemporanea a noi, Ciurru, Inni e (?) lavorano al buco trovato in zona arrapa-dui. Una condotta con leggera inclinazione che si infila alla base di una parete rocciosa. Completamente intasata di terra e rocce. Inizio dello scavo.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-05');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-06">
+      <h3>6 agosto 2025 — Parsifal / Grotta 6-96 delle Carsene</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Alberto M., Stuka, Roby P., Ciurru, Inni, Marco A., Paolo R.</p>
+      <div class="testo">
+        <p>Paolo R., Alberto M., Stuka e Roby P. andiamo a Parsifal. Gita/visita per sondare una grotta in cui nessuno di noi è mai stato. Raggiunta e superata la strettoia L. Ochner. Ci fermiamo in corrispondenza di grandi forre/gallerie.</p>
+<p>&nbsp;</p>
+<p>In contemporanea a noi, Ciurru, Inni e Marco A. vanno alla grotta 6-96.</p>
+<p>Bart tornato a valle per questioni familiari.</p>
+<p>&nbsp;</p>
+<p>Alla sera rientra Bart con Enrico R. e Stefania M.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-07">
+      <h3>7 agosto 2025 — Grotta 2-21 delle Carsene / Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Bart, Marco A., Enrico R., Paolo R.</p>
+      <div class="testo">
+        <p>grotta 2-21 (Paolo R., Stefania M., Bart)</p>
+<p>Abisso Fof: Marco A., Enrico R. --&gt; ricerca prosecuzioni</p>
+<p>&nbsp;</p>
+<p>Stuka si dedica alla falegnameria.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-08-08">
+      <h3>8 agosto 2025 — Zona Arrapa Nui</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Inni, Alberto M., Paolo R.</p>
+      <div class="testo">
+        <p>condotta vicino ad arrapa-dui: scavo senza pietà (Paolo R., Ciurru, Inni, Alberto M.)</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-08-08');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-09-23">
+      <h3>23 settembre 2025 — Vallone del Sabbione / Tetti Gavot / Tetti Piatel / Gias Piainet</h3>
+      <p class="meta"><strong>Partecipanti:</strong> Stuka</p>
+      <div class="testo">
+        <p>Vallone del Sabbione, Tetti Gavot, Tetti Piatel, Gias Piainet.</p>
+<p>Battuto per trovare vecchi sentieri che portano in zone alte ovvero, purtroppo, le zone buone dove affiora il calcare di Monte Garbella. Sentiero al Gias Piainet: trovato. Da lì si può accedere alle zone buone, senza spaccarsi le gambe (e le palle) per i primi 500m di dislivello: in teoria il sentiero prosegue nei valloni più dimenticati delle alpi marittime.</p>
+<p>Viste alcune sorgentine e raccolto qualche dato idrologico: valloni curiosamente secchi. Sorgente del Gavot (Carbonai): butta.</p>
+<p>Partecipante: Stuka annoiato e non lavorante.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-09-23');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-09-27">
+      <h3>27 settembre 2025 — Buco del Ghiaccio (2-21)</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Paolo R., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Buco del Ghiaccio 2.21: giornata dedicata alla pulizia dell&#x27;ambiente franoso e all&#x27;apertura del passaggio verso una condotta in discesa.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-09-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-11-08">
+      <h3>8 novembre 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Luigi P., Marco A., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: perlustrazione dell&#x27;ambiente con rotaie sul fondo, dove continua ad esserci un piccolo rigagnolo d&#x27;acqua nonostante la siccità. Le possibili soluzioni di avanzamento prevedono la creazione di un sifone pensile per intervenire dal basso, oppure un accesso dall&#x27;alto. Scavato poi un piccolo buco laterale in sabbia, risultato chiuso. Nel ramo parallelo, a metà galleria, individuato un arrivo stretto con materiale da rimuovere: zona molto interessante da proseguire.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-11-08');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-11-15">
+      <h3>15 novembre 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Enrico R., Marco A., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: nel ramo parallelo dove era stato individuato un arrivo stretto, si è proseguito con la rimozione del materiale. Il cunicolo, in forte salita e molto scivoloso, continua, ma la presenza di sedimenti parzialmente concrezionati rende il lavoro particolarmente impegnativo; per il momento l&#x27;avanzamento è sospeso e da rivalutare. Nelle vicinanze sono stati individuati altri possibili punti di prosecuzione, con aria leggerissima, che richiedono però un notevole lavoro di scavo in sabbia e fango.</p>
+<p>Sul fondo, nella galleria delle rotaie, si è deciso di procedere alti rispetto al rigagnolo d&#x27;acqua, iniziando un intervento più consistente di disostruzione.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-11-15');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-11-23">
+      <h3>23 novembre 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Enrico R., Gioele B., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: proseguiti i lavori nella galleria delle rotaie con la rimozione del materiale presente sul fondo. L&#x27;avanzamento è stato di circa un metro, aprendo l&#x27;accesso a un piccolo ambiente che sembra proseguire in salita. La zona richiederà ulteriore lavoro di rimozione del materiale più pesante per capire cosa realmente si cela dietro.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-11-23');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-12-13">
+      <h3>13 dicembre 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Enrico R., Marco A., Paolo R., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: proseguito lo svuotamento della galleria promettente sul fondo della galleria delle rotaie, con rimozione del materiale accumulato e preparazione dell&#x27;area per le prossime uscite.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-12-13');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2025-12-20">
+      <h3>20 dicembre 2025 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Enrico R., Matteo R., Nunzio T., Paolo R., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: accompagnati i subacquei Gigi Casati e Andrea al sifone terminale. Andrea ha effettuato un&#x27;immersione solitaria: il condotto allagato presenta un andamento in leggera discesa per circa 30 metri, per poi immettersi in una sala completamente allagata di dimensioni approssimative 7 × 5 m. Dalla sala non sono stati individuati ulteriori sbocchi; il pavimento risulta fortemente intasato da argilla e detriti.</p>
+<p>Il sifone esplorato rappresenta al momento il limite idrologico noto della grotta, con ambienti completamente allagati e colmati da sedimenti, che non consentono ulteriori avanzamenti senza interventi specifici.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2025-12-20');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-01-10">
+      <h3>10 gennaio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Enrico R., Marco (sub), Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: effettuato un importante svuotamento della galleria in salita. L&#x27;avanzamento è stato limitato, ma il lavoro svolto ha permesso di preparare il fronte per le prossime uscite. La presenza costante dell&#x27;acqua rende le operazioni particolarmente difficili; al momento rimane comunque la principale linea guida per individuare una possibile prosecuzione.</p>
+<p>La squadra ha lavorato con grande sintonia, riuscendo a trasportare il materiale per circa 25–30 metri in salita. Senza il carrello e le rotaie progettate e realizzate da Bart, l&#x27;attività sarebbe stata di fatto impraticabile.</p>
+<p>Partecipanti: Bart, Ciurru, Enrico R., Marco (sub), Stefania M., Alberto M.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-01-10');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-01-24">
+      <h3>24 gennaio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Enrico R., Marco A., Matteo R., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: la galleria in salita è ancora lì ad aspettarci, e la squadra è pronta a rimuovere il materiale che ne impedisce l&#x27;avanzamento. A ogni uscita sembra che sabbia e tacchini non diminuiscano mai. Come prima operazione, Bart ha prolungato le rotaie di circa 4 metri, per avvicinare il più possibile il carrello al fronte. Con una squadra di sole cinque persone è stato necessario organizzarsi con attenzione, distribuendo bene le posizioni lungo il tragitto, anche perché il percorso di trasporto si allunga progressivamente.</p>
+<p>Un grosso masso, rivelatosi poi parte del pavimento, ci ha fatto perdere un po&#x27; di tempo senza che fosse possibile rimuoverlo. Nel frattempo, smuovendo il pietrisco al fronte, l&#x27;acqua ha iniziato a filtrare dal soffitto, trasformandosi presto in una doccia costante. La galleria tende a verticalizzarsi sensibilmente, facilitando la caduta di pietre e sabbione nello spazio sottostante.</p>
+<p>A fine giornata si è finalmente intravisto un vuoto ed è stato possibile passare. Oltre l&#x27;ostruzione si apre una galleria in salita lunga circa 8–10 metri, dove si procede comodamente in piedi. In alto gira di 90° a destra, ma risulta completamente intasata da sabbia e argilla: qui si avanza in ginocchio per un&#x27;ulteriore decina di metri fino a un piccolo arrivo d&#x27;acqua. Sarà necessario scavare ancora, ma il lavoro appare agevole grazie alla natura sabbiosa dei depositi e alla presenza di spazio per accumulare il materiale.</p>
+<p>La maggior parte dell&#x27;acqua proviene da un arrivo laterale subito all&#x27;ingresso della prima galleria; si valuterà la possibilità di un&#x27;intubazione, intervento da programmare per la prossima uscita, insieme alla sistemazione dell&#x27;accesso, che rimane ancora molto carico di sabbia e ghiaione. Uscendo dalla grotta, sono state avvertite lievi correnti d&#x27;aria in faccia, un fatto insolito per il Bergamino.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-01-24');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-01-31">
+      <h3>31 gennaio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Enrico R., Marco A., Nunzio T., Roby P., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: sistemato definitivamente il passaggio con acqua, rimuovendo il materiale che lo ostacolava. Completata anche la posa di un tubo corrugato Ø 90 mm per circa 15 m, con captazione dell&#x27;acqua dal ringiovanimento e scarico all&#x27;inizio della salitella.</p>
+<p>Nella nuova sala è stato liberato il passaggio iniziale da fango e sabbia, rendendo l&#x27;accesso più agevole.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-01-31');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-02-07">
+      <h3>7 febbraio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Enrico R., Marco A., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: iniziato lo scavo nel nuovo ambiente. L&#x27;avanzamento è stato portato verso l&#x27;arrivo dell&#x27;acqua e, in parallelo, in una zona laterale sulla sinistra. In entrambi i punti si intravede una possibile prosecuzione, che richiederà ulteriore lavoro per consentire il passaggio.</p>
+<p>Il materiale rimosso, prevalentemente sabbia e pietrame, è stato accumulato senza difficoltà nella prima saletta; per il contenimento Ciurru ha realizzato un muretto a secco.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-02-07');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-02-21">
+      <h3>21 febbraio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Stefania M., Bart</p>
+      <div class="testo">
+        <p>Bergamino</p>
+<p>Disostruito e superato lo stretto individuato nella precedente uscita, è stato possibile accedere oltre il passaggio e proseguire l&#x27;esplorazione. Oltre lo stretto si sviluppa una galleria di circa 20–30 metri, percorsa interamente fino al termine attuale.</p>
+<p>La prosecuzione risulta occlusa da una colata di concrezione che restringe progressivamente la sezione fino a impedire il passaggio; il punto appare promettente e sarà necessario ulteriore lavoro di disostruzione per verificarne la continuazione.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-02-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-02-28">
+      <h3>28 febbraio 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Andrea B., Bart, Ciurru, Denise, Paolo R., Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: allargamento della strettoia superata nell&#x27;uscita precedente. È stato inoltre tassellato il tubo alla parete per limitarne i movimenti durante il passaggio. Effettuata una prima valutazione sulle possibili modalità di prosecuzione al fondo dell&#x27;ultima galleria conosciuta.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-02-28');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-03-21">
+      <h3>21 marzo 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Enrico R., Marco A., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino</p>
+<p>Giornata bilecca, dedicata al lavoro sul fondo. Sono stati liberati circa 2,5 m di galleria, che rimane abbastanza larga ma bassa: si è passati da pochi centimetri iniziali (2–3 cm) fino a circa 10–15 cm da terra. Attualmente si intravede una prosecuzione di almeno 5–6 m, ma sarà necessario ulteriore lavoro di scavo.</p>
+<p>A fine giornata si è intervenuti anche sulla risalita del tubo, liberandola parzialmente dal materiale utilizzando le rotaie. Si è inoltre valutata la possibilità di dedicare una prossima uscita all&#x27;allargamento completo di questo tratto, preferibilmente in condizioni più asciutte, e alla sistemazione della strettoia successiva, che potrebbe rappresentare un limite nel caso di ulteriore sviluppo della cavità.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-03-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-03-28">
+      <h3>28 marzo 2026 — Bergamino</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Enrico R., Alberto M.</p>
+      <div class="testo">
+        <p>Bergamino: proseguito il lavoro sul fondo, continuando le operazioni di scavo e rimozione del materiale nella galleria in sviluppo.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-03-28');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-04-04">
+      <h3>4 aprile 2026 — Bergamino / Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Alberto M., Bart, Ciurru, Enrico R., Paolo R.</p>
+      <div class="testo">
+        <p>Bergamino: proseguito il lavoro sul fondo, con continuazione delle operazioni di scavo e rimozione del materiale nella galleria in sviluppo. L&#x27;altezza è ora di circa 15 cm; si intravede una prosecuzione di diversi metri, con larghezza intorno ai 2 m, ma senza miglioramenti significativi in altezza.</p>
+<p>Partecipanti: Marco A., Alberto M.</p>
+<p>Pozzo del Rospo: rimossa la neve in superficie, recuperati i materiali e riaperto il cantiere in vista delle prossime uscite. Sul fondo si osservano due piccoli scavi generati dall&#x27;azione dell&#x27;acqua.</p>
+<p>Partecipanti: Bart, Ciurru, Enrico R., Paolo R.</p>
+<p>A fine giornata, ritrovo al bar da Karim per una merenda sinoira più che meritata: antipasti, lasagne fatte in casa, salame e bignè al cioccolato, il tutto accompagnato da ottima Barbera. Tra un piatto e l&#x27;altro, commenti sulla giornata, qualche risata e già i primi ragionamenti sulle prossime uscite</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-04-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-04-11">
+      <h3>11 aprile 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Enrico R., Alberto M.</p>
+      <div class="testo">
+        <p>ritrovo da Karim colazione come al solito e prenotazione della merenda, non si sa mai. Al cantiere come primo lavoro sono state chiusi alcuni spiragli laterali alla botola d&#x27;ingresso.</p>
+<p>Primo turno con Enrico R. sul fondo: recuperati circa 50 secchi di materiale e 5 &quot;rane&quot;. Secondo turno con Bart: altri 50 secchi, ma senza recuperi di rane. Per quanto riguarda il trasporto, si conferma che il ruolo di &quot;mulo&quot; funziona bene, ho trovato un mestiere.</p>
+<p>A fine giornata rientro da Karim per la merenda sinoira, per tutti ad eccezione di Ciurru che dovrà cenare a casa! Quattro chiacchere con gli amici Tupin e Nunzio T. che ci hanno raggiunto. Barbera, come sempre, al top.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-04-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-04-18">
+      <h3>18 aprile 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Inni, Roby P., Stefania M.</p>
+      <div class="testo">
+        <p>integrazione della struttura con tubi Innocenti nell&#x27;ultima parte scavata e messa in sicurezza dell&#x27;area per il recupero dei secchi di materiale dall&#x27;alto.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-04-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-05-16">
+      <h3>16 maggio 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Inni, Ciurru, Roby P., Alberto M., Enrico R.</p>
+      <div class="testo">
+        <p>Provato il nuovo paranco e i nuovi secchi in tola da 25lt. 75 secchi portati fuori (come circa 200 dei vecchi secchi). Scesi di 1 metro e mezzo circa. Il nuovo metodo funziona molto bene. Si iniziano ad intravedere sporadici piccoli vuoti.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-05-16');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-05-23">
+      <h3>23 maggio 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Stefania M., Marco A., Enrico R., Tupin</p>
+      <div class="testo">
+        <p>Tirati fuori 50 tole, vuoti più frequenti e un po&#x27; più grandi con pietre pulite.</p>
+<p>Partecipanti: Bart, Ciurru, Stefania M., Marco A., Enrico R. e grande ritorno di Tupin.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-05-23');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-05-30">
+      <h3>30 maggio 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Marco A., Alberto M., Enrico R.</p>
+      <div class="testo">
+        <p>61 tole, 1 metro e mezzo nuovo di pali, vuoti e ossa di qualche animaletto sconosciuto.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-05-30');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-06-06">
+      <h3>6 giugno 2026 — Pozzo del Rospo</h3>
+      <p class="meta"><strong>Complesso:</strong> Sistema del Bergamino &nbsp;·&nbsp; <strong>Partecipanti:</strong> Ciurru, Enrico R., Inni, Nunzio T., Stefania M., Alberto M.</p>
+      <div class="testo">
+        <p>estratti alcuni secchi di materiale dal pozzo e smantellato il campo in preparazione della prossima stagione di lavoro.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-06-06');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-06-13">
+      <h3>13 giugno 2026 — Zona Morgantini / Abisso Fof</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Roby P., Alberto M.</p>
+      <div class="testo">
+        <p>Zona Morganti / Abisso Fof: salita alla Morganti con condizioni della strada buone. Aperto l&#x27;ingresso dell&#x27;Abisso Fof e messa in sicurezza la prima discenderia di Parsifal.</p>
+<p>Iniziati inoltre i lavori di ammodernamento del Gias dell&#x27;Ortica, con pulizia e sistemazione dell&#x27;area.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-06-13');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-06-20">
+      <h3>20 giugno 2026 — Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Alberto M., Enrico R., Paolo R.</p>
+      <div class="testo">
+        <p>Attività di campagna 20-06-2026_21-06-2026</p>
+<p>Conca delle Carsene - Gias dell&#x27;ortica</p>
+<p>&nbsp;</p>
+<p>Si sale per due giorni in Marguareis. Partecipanti: Bart, Alberto M., Enrico R., Paolo R.</p>
+<p>&nbsp;</p>
+<p>20-06-2026</p>
+<p>Nonostante secondo il calendario sia il primo weekend dell&#x27;estate, la suddetta sembra già iniziata da più di un mese.</p>
+<p>Con il solito Defender di Bart, accompagnati da una Elena azzoppata e dalla cagnolina Thayla saliamo con un gran caldo per la via del sale (abbastanza trafficata).</p>
+<p>Oltre ai viveri per il weekend portiamo su un po&#x27; di materiali utili al rinnovamento del gias: cemento, colla per piastrelle, rasante, una cariola per il trasporto con ruota piena (R.I.P.), luminarie varie.</p>
+<p>Neve ne è rimasta poca, solamente nelle conche più ombrose, nonostante l&#x27;inverno dalle precipitazioni piuttosto abbondanti in questa zona.</p>
+<p>In conca, la vegetazione è rigolgiosa. Le ortiche ci accolgono con il loro poco piacevole abbraccio.</p>
+<p>Bart rimane a portare avanti il lavoro al gias. Enrico R., rientrato in tarda notte da trasferta &quot;lavorativa&quot; + serata alolica, usando un eufemismo, è poco reattivo ma carico di sostanze aeriformi letali. Poco convinto, ci segue comunque verso la grotta.</p>
+<p>Si va a Parsifal con l&#x27;idea di attrezzare fino al salone &quot;Welcome Torino&quot;. Alberto M. è in testa e fa il suo solito. Enrico R. chiude. Paolo R. sta nel mezzo.</p>
+<p>La discenderia di ingresso è stata pulita così come i terrazzini che collegano i primi due saltini.</p>
+<p>Continuato l&#x27;armo fino alla sala da cui partono diverse vie: facendo qualche passo in discesa su terreno franoso, a sinistra, imboccando una finestra all&#x27;altezza di un paio di metri si raggiunge la zona delle gallerie di -50 m. Continuando nella direzione di massima pendenza ci si immette in una galleria/meandro che scende a salti e pozzi. Questa è la via che porta al salone di -114 m.</p>
+<p>Enrico R. ci abbandona per il troppo sonno.</p>
+<p>Eccoci quindi nella galleria, a tratti stretta a tratti più larga, intervalla salti di 2-3 metri a pozzi da circa 10 m. Giunti in un ambiente alto e spazioso ci si interrompe per mancanza di materiali.</p>
+<p>Rientro alla base. Abbeveraggio e resoconto delle attività con Bart e Enrico R.</p>
+<p>Al gias recuperiamo alcuni materiali da riportare in capanna, carichiamo la cariola, attrezzata con apposita fune da tiro e saliamo.</p>
+<p>In serata recuperiamo Denise, intenta a pellegrinare verso la capanna.</p>
+<p>Cibo, alcool e comodi giacigli per superare la notte.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-06-20');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-06-21">
+      <h3>21 giugno 2026 — Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Alberto M., Enrico R., Paolo R.</p>
+      <div class="testo">
+        <p>21-06-2026</p>
+<p>Per via della mancanza di materiali (corde) siamo indecisi sul da fare. Dal rilievo della grotta, si può dire non è stato immediato capire quanta corda fosse necessaria.</p>
+<p>Carichiamo la cariola e gli zaini con il secondo giro di materiali edilizi e ci incamminiamo per il gias. L&#x27;idea è di utilizzare le rimanenti corde, già portate il giorno precedente in grotta.</p>
+<p>Dopo un paio di tornanti, dalla capanna ci avvisano dell&#x27;arrivo di Jacopo e Leo, che informati della nostra necessità ci hanno gentilmente portato un paio di corde.</p>
+<p>Giunti al gias intorno alle 10 e 30, notiamo che la discesa è stata letale per la povera ruota piena della cariola.</p>
+<p>Al gias siamo accolti come sempre da un nugolo di mosche e zanzare di varia taglia che non allietano la permanenza. Plachiamo la sete con della birra fresca. Aiutati dall&#x27;alcool, tergiversiamo. Sono le 11 e 30 circa e la decisione è presa: si scende tutti e 4, puntiamo sempre a raggiungere il salone &quot;Welcome Torino&quot;.</p>
+<p>Alle 12 e 30 circa entriamo in grotta. Discesa piuttosto veloce. Paolo R. rimane in fondo per prendere nota degli armi fatti.</p>
+<p>Superato il punto in cui ci siamo fermati ieri Paolo R. e Alberto M., si giunge in una galleria molto alta e larga 1-2 metri. Seguiamo i fix e attrezziamo in alto. Passaggi aerei poco comodi portano all&#x27;attacco di un pozzo stimato in circa 20 m alla cui base ci si trova in un alto salone (salone di -114 m). Da qui si dipartono più vie:</p>
+<p>guardando verso la parete opposta a quella da cui siamo scesi, sulla sinistra si imboccano delle gallerie che portano al ramo del geriatrico; di fronte alla parete di discesa, si imbocca una galleria, a tratti meandro a tratti forra piuttosto lunga che porta all&#x27;ingresso del salone &quot;Welcome Torino&quot;.</p>
+<p>In tutta la galleria, durante la discesa si percepisce una netta corrente d&#x27;aria che soffia alle spalle (soffia nella direzione di avanzamento).</p>
+<p>Man mano che si scende, sul fondo della galleria percorsa, si innesaca un piccolo flusso di acqua.</p>
+<p>Usciamo dalla grotta alle 17 e 30 circa.</p>
+<p>Sosta al gias dove riordiniamo l&#x27;interno e raccogliamo le forze per il ritorno i capanna.</p>
+<p>Cena e rientro nella civiltà.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-06-21');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-06-27">
+      <h3>27 giugno 2026 — Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Marco A., Nunzio T., Stefania M., Bart, Enrico R.</p>
+      <div class="testo">
+        <p>Conca delle Carese - Parsifal / Gias delle ortiche.</p>
+<p>Nunzio T., Marco A. e Enrico R. hanno armato il pozzo welcome to Torino e si sono diretti verso l&#x27;incredulo, viaggio terminato per mancanza di corda al pozzo prima delle finestra per entrare nel ramo dell&#x27;incredulo, nel frattempo Bart e Stefania M. hanno rifatto gli armi per renderli più comodi fino a Welcome to Torino.</p>
+<p>Bart ed Enrico R. hanno dormito in capanna per continuare i lavori al Gias la domenica. Domenica sera è anche arrivato il pastore con le bestie.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-06-27');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-07-04">
+      <h3>4 luglio 2026 — Morgantini – Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Davide T., Inni, Roby P., Sara, Alberto M.</p>
+      <div class="testo">
+        <p>Sabato 4 e domenica 5 luglio 2026</p>
+<p>Morgantini – Parsifal / Gias dell&#x27;Ortica</p>
+<p>La squadra è salita ai Morgantini già nella serata di venerdì. Presenti Alberto M., Bart, Davide T., Roby P. e Sara.</p>
+<p>Nella mattinata di sabato Alberto M., Roby P. e Davide T. sono entrati in Parsifal con l&#x27;obiettivo di raggiungere l&#x27;Incredulo. Il programma è però cambiato quando il pozzo successivo, che dal rilievo sembrava di modesta entità, si è rivelato molto più profondo del previsto. Dal bordo si intuiva un enorme ambiente sottostante, ma la corda disponibile non era sufficiente per proseguire.</p>
+<p>Nel frattempo, al Gias dell&#x27;Ortica, Bart e Sara, raggiunti in mattinata da Ciurru e Inni, hanno proseguito i lavori di sistemazione del bivacco, completando il rivestimento in piastrelle dietro la stufa e migliorando l&#x27;installazione della canna fumaria.</p>
+<p>La giornata si è conclusa con una cena a base di polenta e cinghiale accompagnata da un assaggio di formaggi e un buon Barbera prima di un meritato riposo.</p>
+<p>La domenica Alberto M., Davide T. e Sara hanno effettuato un giro esplorativo nelle gallerie del livello −50, percorrendo praticamente per intero il meandro di Ali Papà e i quaranta meandroni. Bart ha invece riarmato il primo traverso ed è andato a verificare un pozzo nella zona del Tappeto Volante, mentre Ciurru e Inni hanno rivisitato alcuni pozzi in Zona S.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-07-04');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-07-11">
+      <h3>11 luglio 2026 — Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Davide T., Inni, Luigi P., Marco A., Paolo R., Roby P., Sara, Alberto M.</p>
+      <div class="testo">
+        <p>Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</p>
+<p>Alberto M., Bart e Luigi P. sono saliti ai Morgantini già nella serata di venerdì.</p>
+<p>Nella mattinata di sabato Alberto M., Marco A., Paolo R. e Davide T. hanno armato l&#x27;ultimo tratto necessario per raggiungere l&#x27;Incredulo. Al fondo del ramo, caratterizzato da ambienti molto ampi e da concrezioni di eccezionale bellezza, è presente un piccolo meandro non ancora percorribile. Il passaggio era già stato ampliato in passato per oltre un metro; è interamente in roccia viva e lascia supporre che gli ultimi depositi dell&#x27;Incredulo si siano svuotati proprio da lì. Il meandro prosegue in discesa, è interessato da una corrente d&#x27;aria e si percepisce anche un lieve rumore, probabilmente generato dal flusso dell&#x27;aria stessa.</p>
+<p>I rami degli Orientali non sono invece attualmente accessibili a causa di un grosso masso in equilibrio sopra un pozzo, che dovrà essere messo in sicurezza prima di poter proseguire.</p>
+<p>Luigi P. e Sara hanno raggiunto il fondo del 2-2, mentre Bart, Roby P. e Inni hanno proseguito i lavori al Gias dell&#x27;Ortica, sistemando l&#x27;impianto elettrico, i pannelli fotovoltaici e installando nuove mensole per l&#x27;attrezzatura.</p>
+<p>La giornata si è conclusa come da tradizione con un&#x27;ottima cena al Gias: riso ai funghi porcini e petto di pollo al miele di castagno e uvetta, magistralmente preparati dallo chef Inni. Naturalmente non è mancata la brocca di Barbera.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-07-11');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+    <article class="attivita" id="att-2026-07-18">
+      <h3>18 luglio 2026 — Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Ciurru, Davide T., Enrico R., Paolo R., Alberto M.</p>
+      <div class="testo">
+        <p>Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</p>
+<p>Alberto M., Davide T., Enrico R. e Paolo R. sono scesi al fondo di Parsifal, nel ramo dell&#x27;Incredulo, dove è iniziata la disostruzione del piccolo meandro. L&#x27;avanzamento è stato di circa mezzo metro. Si è però evidenziato un problema con il trapano: nonostante tre batterie a disposizione, l&#x27;autonomia è risultata insufficiente e l&#x27;attrezzatura è stata utilizzata solo per brevi periodi. Sono stati inoltre trasportati sul fondo il materiale per la disostruzione e alcune provviste in vista delle prossime uscite.</p>
+<p>Al Gias dell&#x27;Ortica, Ciurru ha completato l&#x27;imbiancatura, portando praticamente a termine i lavori di sistemazione del Gias.</p>
+<p>Bart ha invece effettuato una battuta esterna nei pressi di Parsifal, individuando un piccolo buchetto con un pozzetto di circa 10 metri. Oltre il Colle del Baban ha inoltre trovato una stretta fessura, lunga alcuni metri e posta a circa 1700 m di quota, interessata da una marcata corrente d&#x27;aria molto fredda, che meriterà ulteriori verifiche.</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-07-18');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
+
+<h2 id="catasto">Riferimento grotte / catasto</h2>
+<table>
+  <thead>
+    <tr><th>Nome</th><th>Complesso</th><th>N. catasto</th></tr>
+  </thead>
+  <tbody>
+    
+    <tr id="cat-rospo"><td>Pozzo del Rospo</td><td>Sistema del Bergamino</td><td>PI3022</td></tr>
+    <tr id="cat-bergamino"><td>Bergamino (Grotta / Tana del Bergamino)</td><td>Sistema del Bergamino</td><td>PI175</td></tr>
+    <tr id="cat-fof"><td>Abisso Fof (già Pozzo 2-2)</td><td>Complesso delle Carsene</td><td>PI763</td></tr>
+    <tr id="cat-parsifal"><td>Parsifal (Abisso Parsifal)</td><td>Complesso delle Carsene</td><td>PI3271</td></tr>
+    <tr id="cat-zucco"><td>Zucco (Grotta Beppe Bessone)</td><td>Area carsica dello Zucco</td><td>PI3303</td></tr>
+    <tr id="cat-spirito"><td>Grotta Spirito</td><td>Sistema degli Alberghi</td><td>PI1879</td></tr>
+    <tr id="cat-221"><td>Grotta 2-21 delle Carsene (Buco del Ghiaccio)</td><td>Complesso delle Carsene</td><td>PI3324</td></tr>
+    <tr id="cat-652"><td>Pozzo 6-52 delle Carsene</td><td>Complesso delle Carsene</td><td>PI3291</td></tr>
+    <tr id="cat-arrapanui"><td>Abisso Arrapa Nui (zona Arrapa-dui)</td><td>Complesso delle Carsene</td><td>PI772</td></tr>
+    <tr id="cat-696"><td>Grotta 6-96 delle Carsene</td><td>Complesso delle Carsene</td><td>non ancora reperito nel catasto online</td></tr>
+    <tr id="cat-bastiani"><td>Fortezza Bastiani</td><td>Complesso delle Carsene</td><td>non catastata (scoperta dal gruppo, 2023)</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<footer>
+  Fonti: chat WhatsApp "Attività di campagna", resoconti allegati, Atlante delle aree carsiche piemontesi (AGSP, 2010), Mondo Ipogeo n.18 (2025), Catasto Speleologico Piemontese e Valdostano (catastogrotte-piemonte.net).
+</footer>
+
+<script>
+function goTo(id) {
+  document.querySelectorAll('.highlight').forEach(function(el) { el.classList.remove('highlight'); });
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({behavior: 'smooth', block: 'center'});
+  el.classList.add('highlight');
+  setTimeout(function() { el.classList.remove('highlight'); }, 2500);
+}
+</script>
+
+</body>
+</html>
