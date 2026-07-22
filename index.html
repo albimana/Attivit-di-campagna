@@ -158,6 +158,12 @@
       <td>Complesso delle Carsene</td>
       <td>Bart, Ciurru, Davide T., Enrico R., Paolo R., Alberto M.</td>
     </tr>
+    <tr id="row-2026-07-12">
+      <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-07-12');return false;">12 luglio 2026</a></td>
+      <td>Gias dell&#x27;Ortica</td>
+      <td>Complesso delle Carsene</td>
+      <td>Bart, Marco A., Sara V., Paolo R.</td>
+    </tr>
     <tr id="row-2026-07-11">
       <td class="c-date"><a href="javascript:void(0)" onclick="goTo('att-2026-07-11');return false;">11 luglio 2026</a></td>
       <td>Conca delle Carsene – <a href="javascript:void(0)" onclick="goTo('cat-parsifal');return false;">Parsifal</a> / Gias dell&#x27;Ortica</td>
@@ -1099,6 +1105,24 @@
       </div>
       <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-07-18');return false;">↑ torna alla riga nel riepilogo</a></p>
     </article>
+    <article class="attivita" id="att-2026-07-12">
+      <h3>12 luglio 2026 — Gias dell&#x27;Ortica</h3>
+      <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Marco A., Sara V., Paolo R.</p>
+      <div class="testo">
+        <p>La giornata di sabato ha avuto effetti importanti sul fisico di Marco A. e Paolo R. Gli strascichi del sabato, uniti alla straripante volontà di Bart e Sara V., ci portano alla decisione di puntare a quella condotta che scende pressoché verticalmente in prossimità della casetta del pastore, al gias dell&#x27;ortica.</p>
+<p>Insomma, si riprende lo scavo che lì giace e che ogni tanto bisogna pur riattivare.</p>
+<p>La cavità si estende per 5-6 metri, in forma di scivolo dal diametro di 1 m circa, intasato di detriti (sedimenti e pietrisco di dimensioni variabili).</p>
+<p>Il lavoro di scavo non è agevolato per via della scomoda posizione di chi sta al fronte di scavo. Lo spazio è stretto e lo scavo dall&#x27;alto verso il basso non è agevole.</p>
+<p>Stimate 4-5 ore di lavoro.</p>
+<p>Avanzamento stimato: 1,5 m.</p>
+<p>La temperatura percepita nella cavità è piuttosto bassa. Niente aria.</p>
+<p>Per agevolare lo scavo sarebbe necessaria una limata ad una lingua di roccia molto fastidiosa in prossimità del fronte.</p>
+<p>Lo scavo è alternato a momenti di pausa in cui i personaggi più senili riposano le proprie membra.</p>
+<p>Nota: Bart continua ad avere freddo nonostante ci sia un bel sole. Cosa starà ad indicare?</p>
+
+      </div>
+      <p class="back"><a href="javascript:void(0)" onclick="goTo('row-2026-07-12');return false;">↑ torna alla riga nel riepilogo</a></p>
+    </article>
     <article class="attivita" id="att-2026-07-11">
       <h3>11 luglio 2026 — Conca delle Carsene – Parsifal / Gias dell&#x27;Ortica</h3>
       <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Davide T., Inni, Luigi P., Marco A., Paolo R., Roby P., Sara V., Alberto M.</p>
@@ -1165,12 +1189,8 @@
       <h3>20 giugno 2026 — Parsifal / Gias dell&#x27;Ortica</h3>
       <p class="meta"><strong>Complesso:</strong> Complesso delle Carsene &nbsp;·&nbsp; <strong>Partecipanti:</strong> Bart, Alberto M., Enrico R., Paolo R.</p>
       <div class="testo">
-        <p>Attività di campagna 20-06-2026_21-06-2026</p>
-<p>Conca delle Carsene - Gias dell&#x27;ortica</p>
+        <p>Si sale per due giorni in Marguareis.</p>
 <p>&nbsp;</p>
-<p>Si sale per due giorni in Marguareis. Partecipanti: Bart, Alberto M., Enrico R., Paolo R.</p>
-<p>&nbsp;</p>
-<p>20-06-2026</p>
 <p>Nonostante secondo il calendario sia il primo weekend dell&#x27;estate, la suddetta sembra già iniziata da più di un mese.</p>
 <p>Con il solito Defender di Bart, accompagnati da una Elena azzoppata e dalla cagnolina Thayla saliamo con un gran caldo per la via del sale (abbastanza trafficata).</p>
 <p>Oltre ai viveri per il weekend portiamo su un po&#x27; di materiali utili al rinnovamento del gias: cemento, colla per piastrelle, rasante, una cariola per il trasporto con ruota piena (R.I.P.), luminarie varie.</p>
@@ -2780,7 +2800,14 @@ function goTo(id) {
   if (!el) return;
   el.scrollIntoView({behavior: 'smooth', block: 'center'});
   el.classList.add('highlight');
-  setTimeout(function() { el.classList.remove('highlight'); }, 5000);
+
+  var ignoreUntil = Date.now() + 900; // ignora lo scroll generato dall'animazione stessa
+  function onScroll() {
+    if (Date.now() < ignoreUntil) return;
+    el.classList.remove('highlight');
+    window.removeEventListener('scroll', onScroll);
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
 }
 </script>
 
